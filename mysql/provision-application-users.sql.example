@@ -1,0 +1,16 @@
+-- Usar somente após confirmar o serviço/banco existente, a versão real e que
+-- railway está vazio. Substitua os placeholders por segredos longos e
+-- diferentes em uma sessão administrativa privada. Nunca faça commit da
+-- cópia preenchida. A aplicação não usa root.
+CREATE USER 'primeway_app'@'%' IDENTIFIED BY 'REPLACE_WITH_APP_SECRET';
+GRANT SELECT, INSERT, UPDATE, DELETE
+    ON railway.*
+    TO 'primeway_app'@'%';
+
+CREATE USER 'primeway_migrate'@'%' IDENTIFIED BY 'REPLACE_WITH_TEMP_MIGRATION_SECRET';
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, DROP, INDEX, REFERENCES
+    ON railway.*
+    TO 'primeway_migrate'@'%';
+
+SHOW GRANTS FOR 'primeway_app'@'%';
+SHOW GRANTS FOR 'primeway_migrate'@'%';

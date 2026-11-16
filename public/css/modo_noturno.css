@@ -1,0 +1,758 @@
+/* PRIMEWAY — tema noturno global, somente quando o usuário ativa nas Configurações.
+   Regras acima dos estilos dos módulos, sem alterar geometria, imagens, status e identidade. */
+html[data-primeway-theme="dark"]{
+    color-scheme:dark;
+    --principal:#0b1423;
+    --secundaria:#b4c9ff;
+    --primaria:#e2be63;
+    --texto:#e5edf8;
+    --texto-secundario:#b6c4d8;
+    --texto-claro:#90a2bd;
+    --branco:#15243a;
+    --cinza-50:#0e1b2d;
+    --cinza-100:#17283f;
+    --cinza-200:#30415c;
+    --cinza-300:#465775;
+    --borda:#344561;
+    --borda-clara:#344561;
+    --sombra:0 10px 28px rgba(0,0,0,.22);
+    --sombra-p:0 10px 28px rgba(0,0,0,.18);
+    --secretary-blue:#a8bfff;
+    --secretary-blue-dark:#83a5ef;
+    --secretary-bg:#0b1423;
+    --secretary-card:#15243a;
+    --secretary-border:#344561;
+    --secretary-text:#e5edf8;
+    --secretary-muted:#b6c4d8;
+    --pw-finish-navy:#b4c9ff;
+    --pw-finish-blue:#b4c9ff;
+    --pw-finish-gold:#e2be63;
+    --pw-finish-ink:#e5edf8;
+    --pw-finish-muted:#b6c4d8;
+    --pw-finish-line:#344561;
+    --pw-finish-surface:#15243a;
+    --pw-finish-shadow:0 8px 24px rgba(0,0,0,.2);
+}
+html[data-primeway-theme="dark"],
+html[data-primeway-theme="dark"] body,
+html[data-primeway-theme="dark"] :is(.app-layout,.dashboard){
+    background:#0b1423!important;
+    color:#e5edf8;
+}
+html[data-primeway-theme="dark"] body :is(
+    main,.main-content,.content,.page-content,.dashboard-content,
+    .settings-page,.student-page,.guardian-page,.teacher-page,
+    .professor-module-page,.secretary-page,.secretary-main,
+    .secretary-content,.perfil-page,.chat-page,.dashboard-main,
+    .dashboard-page,.professor-page,.aluno-page,.responsavel-page,
+    .secretary-dashboard,.pw-page,.calendar-page
+){
+    background:#0b1423!important;
+    color:#e5edf8!important;
+}
+/* Navegação: azul-marinho com texto visível; seleção em ouro discreto. */
+html[data-primeway-theme="dark"] body :is(.app-layout,.dashboard) .sidebar,
+html[data-primeway-theme="dark"] body .sidebar{
+    background:#0c1930!important;
+    background-image:none!important;
+    border-color:#30415c!important;
+    color:#e9f0fb!important;
+}
+html[data-primeway-theme="dark"] body .sidebar :is(.sidebar-menu a,.sidebar-bottom button,.primeway-side-profile){
+    color:#d6e3f7!important;
+    background:transparent;
+}
+html[data-primeway-theme="dark"] body .sidebar :is(.sidebar-menu a:hover,.sidebar-menu a.active,.sidebar-menu a[aria-current="page"]){
+    background:#1c3353!important;
+    color:#f9e4a6!important;
+}
+html[data-primeway-theme="dark"] body .sidebar :is(.sidebar-menu a.active,.sidebar-menu a[aria-current="page"]) :is(i,span){
+    color:#f9e4a6!important;
+}
+html[data-primeway-theme="dark"] body .sidebar .primeway-side-profile{
+    background:#152840!important;
+    border-color:#344561!important;
+}
+html[data-primeway-theme="dark"] body .sidebar .primeway-side-profile :is(strong,small){
+    color:#e5edf8!important;
+}
+/* Áreas de conteúdo, cards, tabelas e componentes dos cinco portais. */
+html[data-primeway-theme="dark"] body :is(
+    .card,.dashboard-card,.dashboard-panel,.portal-panel,
+    .summary-card,.stat-card,.metric-card,.status-card,
+    .settings-card,.settings-section,.settings-group,.settings-summary,
+    .perfil-card,.profile-card,.teacher-card,.student-card,.guardian-card,
+    .secretary-card,.class-card,.subject-card,.notice-card,.event-card,
+    .notification-card,.activity-card,.conversation-card,
+    .table-wrapper,.table-container,.data-table-container,
+    .detail-card,.details-panel,.info-card,.filter-card,.filters-panel,
+    .pw-secretary-create-dialog,.modal-content,.modal-card,
+    .chat-container,.student-chat,.teacher-chat,.guardian-chat,.secretary-chat,
+    .chat-conversation,.chat-sidebar,.student-chat-conversation,
+    .teacher-chat-conversation,.guardian-chat-conversation,.secretary-chat-conversation,
+    .dashboard-kpi,.kpi-card,.chart-card,.widget-card,
+    .summary-panel,.main-panel,.school-card
+){
+    background:#16253b!important;
+    background-image:none!important;
+    color:#e5edf8!important;
+    border-color:#344561!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .chat-conversations,.chat-messages,.conversation-list,.chat-message-list,
+    .teacher-message-list,.guardian-message-list,.secretary-message-list,
+    .student-chat-sidebar,.teacher-chat-sidebar,.guardian-chat-sidebar,
+    .secretary-chat-sidebar,.chat-search,.teacher-chat-search,
+    .guardian-chat-search,.secretary-chat-search,.chat-input-area,
+    .student-chat-form,.teacher-message-form,.guardian-message-form,
+    .secretary-message-form,.secretary-chat-form,.conversation-header,
+    .teacher-chat-header,.guardian-chat-header,.secretary-chat-header,
+    .chat-conversation-header,.chat-sidebar-header
+){
+    background:#112036!important;
+    border-color:#344561!important;
+    color:#e5edf8!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .conversation,.conversation-item,.teacher-conversation-item,
+    .guardian-conversation-item,.secretary-conversation-item,
+    .student-conversation-item,.recent-item,.calendar-item,
+    .notice-item,.table-row,.list-row,.detail-row,
+    .contact-item,.teacher-contact-item,.guardian-contact-item
+){
+    background:#16263e!important;
+    color:#e5edf8!important;
+    border-color:#334661!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .conversation.active,.conversation-item.active,.teacher-conversation-item.active,
+    .guardian-conversation-item.active,.secretary-conversation-item.active,
+    .student-conversation-item.active,
+    .conversation:hover,.conversation-item:hover
+){
+    background:#28446b!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .message.received .message-bubble,.chat-message.other,
+    .teacher-message.other,.guardian-message.other,.secretary-message.other,
+    .chat-message.received,.pw-chat-attachment-card
+){
+    background:#223651!important;
+    border-color:#425b7e!important;
+    color:#edf4ff!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .message.sent .message-bubble,.chat-message.own,
+    .teacher-message.own,.guardian-message.own,.secretary-message.own,
+    .chat-message.sent
+){
+    background:#294577!important;
+    color:#fff!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    h1,h2,h3,h4,h5,h6,th,dt,
+    .dashboard-title,.page-title,.conversation-person h2,
+    .chat-conversation-header h2,.student-page-header h1,
+    .teacher-page-header h1,.guardian-page-header h1,
+    .secretary-page-header h1,.settings-header h1,.perfil-top h1,
+    .settings-section-title,.card-title
+){
+    color:#e9f0ff!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    p,small,label,td,dd,.subtitle,.description,.card-description,
+    .field-description,.table-empty,.empty-state,.help-text,
+    .settings-header p,.perfil-top p
+){
+    color:#c2cee0!important;
+}
+html[data-primeway-theme="dark"] body :is(.section-label,.eyebrow){
+    color:#e2be63!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    table,thead,tbody,tfoot,tr,td,th,
+    .table-header,.table-body,.table-footer
+){
+    border-color:#344561!important;
+}
+html[data-primeway-theme="dark"] body table{
+    background:#16253b!important;
+    color:#e5edf8!important;
+}
+html[data-primeway-theme="dark"] body :is(thead,th){
+    background:#1c304c!important;
+}
+html[data-primeway-theme="dark"] body tr:nth-child(even) td{
+    background-color:#1a2b44!important;
+}
+html[data-primeway-theme="dark"] body tr:hover td{
+    background-color:#223a5c!important;
+}
+/* Entradas e formulários com contraste e estado de foco acessíveis. */
+html[data-primeway-theme="dark"] body :is(
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]),
+    textarea,select,[contenteditable="true"],.form-control
+){
+    background:#0e1b2e!important;
+    color:#edf4ff!important;
+    border-color:#466180!important;
+    -webkit-text-fill-color:#edf4ff;
+}
+html[data-primeway-theme="dark"] body :is(input,textarea)::placeholder{
+    color:#9aadc9!important;
+    -webkit-text-fill-color:#9aadc9;
+}
+html[data-primeway-theme="dark"] body :is(input,textarea,select):focus-visible{
+    outline:2px solid #e2be63!important;
+    outline-offset:2px;
+}
+html[data-primeway-theme="dark"] body :is(input[type="checkbox"],input[type="radio"]){
+    accent-color:#dbb457;
+}
+html[data-primeway-theme="dark"] body :is(
+    button:not(.primary-button):not(.secretary-primary-button):not(.save-settings-top),
+    .secondary-button,.outline-button,.filter-button,.toolbar-button
+){
+    border-color:#425878;
+}
+html[data-primeway-theme="dark"] body :is(
+    .secondary-button,.outline-button,.filter-button,
+    .pw-secretary-create-cancel,.modal-close,.dialog-close
+){
+    background:#203653!important;
+    color:#ecf4ff!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    dialog,.modal,.modal-dialog,.dialog-content,
+    .popover,.dropdown-menu,.dropdown-content,.tooltip,
+    .pw-chat-message-menu,.pw-chat-preview-dialog,.pw-chat-preview-content
+){
+    background:#16253b!important;
+    color:#eaf2fd!important;
+    border-color:#405573!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .divider,.separator,.perfil-divider,hr
+){
+    border-color:#344561!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .perfil-page,.perfil-image,.perfil-photo-card,.perfil-form-card,
+    .perfil-form,.perfil-card,.perfil-grid
+){
+    color:#e6eef9!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .perfil-card,.perfil-form-card,.perfil-photo-card,
+    .pw-secretary-create-form,.pw-secretary-create-grid
+){
+    background:#16253b!important;
+}
+/* Não inverter fotografias, imagens, logos, calendários gráficos ou vídeos. */
+html[data-primeway-theme="dark"] body img,
+html[data-primeway-theme="dark"] body video,
+html[data-primeway-theme="dark"] body canvas{
+    filter:none!important;
+}
+html[data-primeway-theme="dark"] body a:not(.primary-button){
+    text-decoration-color:#a6c2ff;
+}
+html[data-primeway-theme="dark"] body :is(.status-badge,.badge,.alert,.notice,.toast,.primeway-toast){
+    border-color:rgba(150,174,212,.28);
+}
+/* Páginas de configurações pessoais; também funciona no modo claro. */
+.pw-appearance-panel{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:22px;
+    background:#fff;
+    color:#1b2e4a;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:23px 25px;
+    margin-bottom:24px;
+    box-shadow:0 8px 30px rgba(18,35,66,.06);
+}
+.pw-appearance-panel h2{font-size:20px;margin:4px 0 8px;color:#1e3a8a}
+.pw-appearance-panel p{font-size:13px;line-height:1.6;margin:0;color:#596a80}
+.pw-appearance-panel .pw-appearance-kicker{font-size:11px;font-weight:800;letter-spacing:.12em;color:#9b772a}
+.pw-appearance-control{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.pw-appearance-control > span{font-weight:700;font-size:13px}
+.pw-theme-switch{position:relative;display:inline-flex;align-items:center;width:58px;height:34px;cursor:pointer}
+.pw-theme-switch input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;margin:0;z-index:2}
+.pw-theme-switch .pw-theme-track{width:58px;height:34px;border-radius:30px;background:#a6b3c6;transition:background .15s ease;position:relative}
+.pw-theme-switch .pw-theme-track::after{content:"";position:absolute;top:4px;left:4px;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 1px 5px #142b4a44;transition:transform .15s ease}
+.pw-theme-switch input:checked + .pw-theme-track{background:#31588b}
+.pw-theme-switch input:checked + .pw-theme-track::after{transform:translateX(24px)}
+.pw-theme-switch input:focus-visible + .pw-theme-track{outline:3px solid #d7a936;outline-offset:3px}
+.pw-appearance-info{font-size:12px;color:#596a80;margin-top:10px}
+html[data-primeway-theme="dark"] body .pw-appearance-panel{
+    background:#16253b!important;color:#e7effa!important;border-color:#405573!important;
+}
+html[data-primeway-theme="dark"] body .pw-appearance-panel :is(h2,p,.pw-appearance-control > span,.pw-appearance-info){
+    color:#e7effa!important;
+}
+.pw-preferences-page{min-height:100vh;flex:1;padding:clamp(22px,4vw,48px);background:var(--principal)}
+.pw-preferences-inner{max-width:950px;margin:0 auto}
+.pw-preferences-back{display:inline-flex;gap:9px;align-items:center;margin-bottom:28px;color:var(--secundaria);font-weight:700;text-decoration:none}
+.pw-preferences-inner h1{font-size:clamp(26px,3vw,38px);color:var(--secundaria);margin:8px 0 9px}
+.pw-preferences-intro{color:var(--texto-secundario);font-size:14px;margin:0 0 26px;line-height:1.6}
+.pw-preferences-note{font-size:13px;color:var(--texto-secundario);line-height:1.6}
+html[data-primeway-theme="dark"] body .pw-preferences-page{background:#0b1423!important}
+html[data-primeway-theme="dark"] body .pw-preferences-back{color:#b4c9ff!important}
+@media(max-width:600px){
+    .pw-appearance-panel{flex-direction:column;align-items:flex-start;padding:18px}
+    .pw-appearance-control{width:100%;justify-content:space-between}
+    .pw-preferences-page{padding:20px}
+}
+@media(prefers-reduced-motion:reduce){
+    .pw-theme-switch .pw-theme-track,.pw-theme-switch .pw-theme-track::after{transition:none}
+}
+
+/* Painéis legados usam nomes próprios em vez de classes "-card" / "-panel". */
+html[data-primeway-theme="dark"] body :is(
+    .students-panel,.professors-panel,.guardians-panel,.classes-panel,.subjects-panel,
+    .grades-panel,.professor-card,.professor-quick-card,.professor-panel,
+    .recent-section,.portal-summary article,.student-stats div,
+    .school-year-card,.upcoming-card,.class-card-stats > div,
+    .student-detail-grid > div,.teacher-detail-grid > div,
+    .guardian-detail-grid > div,.class-detail-grid > div,
+    .manager-student-card,.secretary-pickup-card,.secretary-pickup-details,
+    .class-modal-dialog,.student-modal-dialog,.teacher-modal-dialog,
+    .guardian-modal-dialog,.enrollment-dialog,.enrollment-current,
+    .calendar-modal-card,.grades-dialog,.professor-dialog,
+    .guardian-dialog,.student-modal-box,.student-view-box,
+    .class-modal-box,.class-view-box,.students-manager-box,
+    .subject-modal-box,.subject-view-box,.summary-card
+){
+    background:#16253b!important;
+    background-image:none!important;
+    color:#e9f1fc!important;
+    border-color:#344561!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .topo,.header,.topbar,.page-header,.dashboard-header,
+    .professor-header,.students-header,.settings-header,.teacher-header,
+    .student-page-header,.guardian-page-header,.secretary-page-header
+){
+    background-color:transparent!important;
+    color:#e9f1fc!important;
+    border-color:#344561!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .students-table th,.teachers-table th,.guardians-table th,
+    .classes-table th,.subjects-table th,.grades-table th,.grades-launch-table th,
+    .enrollment-table th
+){
+    background:#203650!important;
+    color:#e9f1fc!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .students-table td,.teachers-table td,.guardians-table td,
+    .classes-table td,.subjects-table td,.grades-table td,.grades-launch-table td,
+    .enrollment-table td
+){
+    color:#cfdaeb!important;
+    border-color:#354864!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .calendar-weekdays,.calendar-day,.calendar-day.other-month,
+    .calendar-day.today,.calendar-event-chip,
+    .calendar-grid,.calendar-week,.upcoming-list
+){
+    background-color:#192b43!important;
+    border-color:#374a65!important;
+    color:#d9e5f6!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .calendar-day.today,.calendar-day.selected,.calendar-day.is-selected
+){
+    outline:1px solid #dfb85b!important;
+    background-color:#2b4565!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .student-details-button,.teacher-details-button,.guardian-details-button,
+    .class-details-button,.enrollment-manage-button,.table-action-button,
+    .student-action-button,.subject-action-button,.class-action-button,
+    .pw-secretary-create-close,.teacher-modal-close,.guardian-modal-close,
+    .student-modal-close,.class-modal-close
+){
+    background:#273b59!important;
+    color:#e8f1fc!important;
+    border-color:#435979!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .primary-button,.secretary-primary-button,.save-settings-top,
+    .perfil-button,.secretary-chat-primary,.chat-send,
+    .submit-button,.save-button,.btn-primary
+){
+    background:#2d5596!important;
+    color:#fff!important;
+    border-color:#668cc3!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .primary-button,.secretary-primary-button,.save-settings-top,
+    .perfil-button,.secretary-chat-primary,.chat-send,
+    .submit-button,.save-button,.btn-primary
+) :is(span,i){
+    color:#fff!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .conversation-info strong,.chat-conversation-header h2,
+    .teacher-conversation-name,.guardian-conversation-name,
+    .secretary-conversation-name,.portal-summary strong,
+    .summary-card strong,.professor-card strong
+){
+    color:#f0f5fe!important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .dialog-close,.close-modal,.student-modal-close,
+    .subject-modal-close,.class-modal-close,.teacher-modal-close
+){
+    background:#243b58!important;
+    color:#eaf2ff!important;
+}
+.pw-preferences-profile-link{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 16px;
+    margin:7px 10px;
+    color:var(--texto-secundario);
+    font-size:13px;
+    font-weight:650;
+    text-decoration:none;
+    border-radius:10px;
+}
+.pw-preferences-profile-link:hover{
+    background:rgba(90,120,165,.12);
+}
+html[data-primeway-theme="dark"] body .pw-preferences-profile-link{
+    color:#d6e3f7!important;
+}
+
+
+/* ==============================================================
+   MODO NOTURNO — COBERTURA DOS MÓDULOS LEGADOS
+   Tons escuros consistentes e contraste para leitura prolongada.
+   Mantém o modo claro e a semântica de avisos intactos.
+   ============================================================== */
+html[data-primeway-theme="dark"] {
+    --pw-night-bg: #0b1423;
+    --pw-night-surface: #17263d;
+    --pw-night-surface-2: #1c2e48;
+    --pw-night-deep: #0f1e32;
+    --pw-night-hover: #253d5c;
+    --pw-night-border: #3b506f;
+    --pw-night-text: #eef4ff;
+    --pw-night-muted: #bfcee2;
+    --pw-night-accent: #f0c96b;
+}
+/* Cartões e painéis realmente escuros, inclusive os que têm valores #fff fixos. */
+html[data-primeway-theme="dark"] body :is(
+    .admin-quick-card,.admin-dashboard-date,.admin-dashboard-meta .btn-notificacao,
+    .admin-dashboard-search-row .pesquisa,.dashboard-empty-state,
+    .secretary-panel,.secretary-profile,.secretary-quick-card,
+    .activities-panel,.activity-modal-card,.activity-overview,
+    .submissions-panel,.correction-card,.correction-section,
+    .guardian-notice,.teacher-notification-tabs,.teacher-notification-item,
+    .secretary-notification-item,.secretary-notification-tabs,
+    .secretary-notification-dialog,.notification-card,
+    .guardian-student-stats div,.guardian-student-actions a,
+    .pickup-privacy,.pickup-map,.pickup-form,
+    .pwcal-panel,.pwcal-page,.pwcal-day,
+    .pw-intelligent-notice,.pw-chat-selected-file,.pw-chat-recording-status,
+    .pw-chat-preview-dialog,.pw-chat-preview-body,.pw-chat-text-preview,
+    .pw-chat-confirm-dialog,.pw-chat-message-menu,
+    .pw-chat-pinned-banner,.pw-chat-audio-card,.pw-chat-file-card,
+    .pw-chat-video-card,.admin-contacts-dialog,.admin-contact-row,
+    .secretary-contacts-dialog,.secretary-chat-action-dialog,
+    .secretary-contact-item,.secretary-contact-filter-bar,
+    .secretary-attachment-dialog,.secretary-attachment-preview-body,
+    .secretary-message-list,.secretary-message,
+    .secretary-chat-suspension-notice,.secretary-chat-suspension-button,
+    .secretary-selected-file,.secretary-message-file,
+    .activity-modal-header,.modal-section,.side-card,
+    .instructions-box,.submission-message,.submission-status,
+    .file-item,.student-file-item,.comment-content,
+    .activity-meta-grid,.student-view-item,.class-view-item,.subject-view-item,
+    .students-year-pill,.teachers-year-pill,.guardians-year-pill,
+    .classes-year-pill,.enrollment-year-pill,
+    .guardian-student-link,.class-student-number,
+    .student-detail-grid > div,.teacher-detail-grid > div,
+    .guardian-detail-grid > div,.class-detail-grid > div,
+    .event-view-grid article,.event-view-item,.event-description-box,
+    .teacher-class-card,.grades-launch-info,.attendance-actions-bar,
+    .secretary-notification-toolbar,.settings-security-note,
+    .setting-toggle-row,.class-card-stats > div,
+    .pw-secretary-create-checks,.pw-secretary-create-error,
+    .calendar-loading,.today,.search-box,.enrollment-current
+) {
+    background: var(--pw-night-surface) !important;
+    background-image: none !important;
+    color: var(--pw-night-text) !important;
+    border-color: var(--pw-night-border) !important;
+}
+/* Superfícies internas e listas que podem permanecer claras sobre os cartões. */
+html[data-primeway-theme="dark"] body :is(
+    .secretary-chat-search,.secretary-chat-sidebar,.secretary-chat,
+    .chat-conversation,.chat-conversations,.chat-message-list,
+    .teacher-chat-sidebar,.student-chat-sidebar,.guardian-chat-sidebar,
+    .teacher-message-list,.student-message-list,.guardian-message-list,
+    .message-list,.messages-list,.messages-container,
+    .secretary-conversation-item,.secretary-contact-filter-bar,
+    .pw-chat-preview-body,.pw-chat-pinned-banner,
+    .correction-header,.activity-modal-header,.event-view-grid,
+    .new-chat-person,.info-chat-detail,.calendar-weekdays,
+    .pwcal-weekdays,.teacher-notification-tabs,
+    .secretary-notification-tabs,.secretary-contact-item,
+    .teacher-students-table th,.teacher-lessons-table th,.attendance-table th
+) {
+    background-color: var(--pw-night-deep) !important;
+    color: var(--pw-night-text) !important;
+    border-color: var(--pw-night-border) !important;
+}
+/* Mensagens recebidas e enviadas seguem visualmente distinguíveis. */
+html[data-primeway-theme="dark"] body :is(
+    .secretary-message,.chat-message:not(.own):not(.sent),
+    .pw-chat-file-card,.pw-chat-audio-card,.pw-chat-video-card,
+    .secretary-message-file,.secretary-message-image,
+    .pw-chat-selected-file,.pw-chat-recording-status
+) {
+    background-color: #203550 !important;
+    color: var(--pw-night-text) !important;
+    border-color: #486182 !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .secretary-message.own,.message.own,.message.sent,
+    .chat-message.own,.chat-message.sent,
+    .teacher-message.own,.guardian-message.own
+) {
+    background-color: #294674 !important;
+    color: #ffffff !important;
+    border-color: #587ab0 !important;
+}
+/* Diálogos de anexos e menus de ações: sem caixas brancas. */
+html[data-primeway-theme="dark"] body :is(
+    .admin-contacts-head button,.admin-contact-row,.admin-contacts-pagination button,
+    .secretary-contact-close,.secretary-chat-secondary,
+    .secretary-contact-item,.secretary-attachment-dialog,
+    .secretary-chat-action-icon,.secretary-attachment-preview-body,
+    .pw-chat-attach-button,.pw-chat-audio-button,.pw-chat-image-button,
+    .pw-chat-file-action,.pw-chat-preview-action,.pw-chat-preview-close,
+    .pw-chat-message-menu,.pw-chat-message-options-button,
+    .pw-chat-message-menu-item,.pw-chat-confirm-cancel,.pw-chat-voice-play,
+    .secretary-chat-attach,.secretary-chat-secondary,
+    .pw-chat-preview-action,.pw-chat-preview-close,
+    .secretary-secondary-button
+) {
+    background: var(--pw-night-surface-2) !important;
+    color: var(--pw-night-text) !important;
+    border-color: var(--pw-night-border) !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .pw-chat-message-menu-item:hover,.admin-contact-row:hover,
+    .secretary-contact-item:hover,.activity-row:hover,.submission-item:hover,
+    .student-file-open:hover,.pw-chat-file-action:hover,
+    .pw-chat-attach-button:hover,.pw-chat-audio-button:hover,
+    .notification-card:hover,.secretary-notification-item:hover,
+    .teacher-notification-item:hover,.guardian-notice:hover,
+    .student-view-item:hover,.new-chat-person:hover
+){
+    background: var(--pw-night-hover) !important;
+}
+/* Cartões de aviso: não deixar texto claro sobre o fundo pastel original. */
+html[data-primeway-theme="dark"] body :is(
+    .activity-status-pill,.submission-status,.secretary-status,
+    .teacher-access,.guardian-access,.guardian-badges span,
+    .teacher-detail-badges span,.detail-badge,
+    .secretary-notification-type,.notification-type,
+    .calendar-event,.calendar-event-chip,.pwcal-type,.upcoming-type,
+    .notice-icon,.recent-status,.alert,.status-badge
+){
+    background-color: #253d5c !important;
+    color: #d9e9ff !important;
+    border-color: #435e80 !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .activity-status-pill.corrected,.activity-status-pill.submitted,
+    .submission-status.corrected,.secretary-status.success,
+    .teacher-access.active,.guardian-access.active,
+    .detail-badge.success,.guardian-badges .success,
+    .status-badge.active,.secretary-notification-type.success
+){
+    background-color: #173e37 !important;
+    color: #a3efcb !important;
+    border-color: #2e7760 !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .activity-status-pill.pending,.activity-status-pill.draft,
+    .submission-status.pending,.secretary-status.warning,
+    .detail-badge.financial,.guardian-badges .financial,
+    .calendar-event-chip.type-Feriado,.calendar-event-chip.type-Aviso
+){
+    background-color: #49381f !important;
+    color: #ffdd94 !important;
+    border-color: #8b6a37 !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .activity-status-pill.late,.submission-status.late,
+    .secretary-status.danger,.teacher-access.inactive,
+    .guardian-access.inactive,.status-badge.inactive,
+    .calendar-event-chip.type-Prova
+){
+    background-color: #4a2633 !important;
+    color: #ffc1c8 !important;
+    border-color: #875160 !important;
+}
+/* Ícones decorativos que ainda carregavam fundos branco-azulados. */
+html[data-primeway-theme="dark"] body :is(
+    .dashboard-card-icon,.admin-quick-card > i:first-child,
+    .recent-icon,.notice-icon,.attendance-stat-icon,.indicator-icon,
+    .portal-summary article > i,.secretary-summary-icon,.summary-icon,
+    .student-avatar,.teacher-avatar,.guardian-avatar,.class-avatar,.subject-avatar,
+    .student-detail-avatar,.teacher-detail-avatar,.guardian-detail-avatar,
+    .class-detail-icon,.student-view-avatar,.class-view-avatar,.subject-view-avatar,
+    .teacher-notification-icon,.secretary-notification-icon,
+    .guardian-notice-icon,.notification-icon,.comment-avatar,
+    .new-chat-person-avatar,.conversation-avatar,.admin-contact-avatar,
+    .pw-chat-audio-icon,.pw-chat-file-icon,.pw-chat-pinned-banner-icon,
+    .pw-chat-voice-play,.secretary-conversation-avatar,.secretary-contact-avatar
+){
+    background: #273f60 !important;
+    color: #c6ddff !important;
+    border-color: #4a668c !important;
+}
+/* Blocos de formulário, busca, filtros e barras de ações. */
+html[data-primeway-theme="dark"] body :is(
+    .student-toolbar,.guardian-toolbar,.professor-toolbar,
+    .secretary-toolbar,.students-actions,.classes-actions,.subjects-actions,
+    .students-search,.classes-search,.subjects-search,
+    .filters,.filter-bar,.filter-row,.calendar-toolbar-actions,
+    .secretary-notification-toolbar,.secretary-contact-filter-bar,
+    .teacher-notification-tabs,.search-box,
+    .pwcal-buttons,.settings-form,.form-grid,.pw-secretary-create-grid,
+    .activity-modal-header,.correction-header
+) {
+    background-color: transparent !important;
+    color: var(--pw-night-text) !important;
+    border-color: var(--pw-night-border) !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .back-button,.filter-button,.upload-button,.delete-outline-button,
+    .file-action,.open-submission-button,.student-file-open,
+    .pwcal-buttons button,.calendar-icon-button,.calendar-nav-button,
+    .secretary-secondary-button,.calendar-secondary-button,
+    .guardian-student-actions a,.portal-actions a,
+    .settings-security-note,.reset-settings-icon,.student-action-button,
+    .class-action-button,.subject-action-button,.teacher-notification-tab,
+    .secretary-notification-tab,.student-details-button
+){
+    background: #243954 !important;
+    color: #e8f2ff !important;
+    border-color: #49607f !important;
+}
+/* Estado ativo continua destacado sem usar branco puro. */
+html[data-primeway-theme="dark"] body :is(
+    .secretary-notification-tab.active,.teacher-notification-tab.active,
+    .new-chat-person.active,.class-card.active,.teacher-class-card.active,
+    .pwcal-day.has-event,.pwcal-day.today,.calendar-day.today
+){
+    background: #294563 !important;
+    color: #ffffff !important;
+    border-color: #b49451 !important;
+}
+/* Calendários clássicos e dos cinco portais. */
+html[data-primeway-theme="dark"] body :is(
+    .pwcal-day,.pwcal-panel,.pwcal-weekdays,
+    .calendar-day,.calendar-weekdays,.weekdays,
+    .calendar-day.other-month,.event-view-grid article,
+    .event-view-item,.event-description-box,.upcoming-card
+){
+    background: #192c44 !important;
+    color: #dce9fa !important;
+    border-color: #445b79 !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .calendar-day.other-month,.pwcal-day.other-month
+){
+    background: #132239 !important;
+    color: #9aacc6 !important;
+}
+/* Área de texto, código e mensagens de ajuda devem permanecer legíveis. */
+html[data-primeway-theme="dark"] body :is(
+    .student-view-item,.class-view-item,.subject-view-item,
+    .info-chat-detail,.instructions-box,.comment-content,
+    .correction-section,.correction-card,.modal-section,
+    .file-item,.student-file-item,.activity-meta-grid,
+    .event-view-info,.pickup-privacy,.settings-security-note
+){
+    color: #e4edfa !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    code,pre,blockquote,.code-block,.file-preview,.pw-chat-text-preview
+){
+    background: #0f2035 !important;
+    color: #e3f2ff !important;
+    border-color: #45607f !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    a,.table-action-button,.student-action-button,.teacher-details-button,
+    .class-details-button,.guardian-details-button,.student-details-button
+):focus-visible{
+    outline: 2px solid var(--pw-night-accent) !important;
+    outline-offset: 2px;
+}
+/* Não aplicar inversão de cores à arte institucional, fotos e previews.
+   PDFs/imagens mantêm suas cores reais; o CONTÊINER fica escuro. */
+html[data-primeway-theme="dark"] body :is(
+    .pw-chat-preview-body iframe,.secretary-attachment-preview-frame,
+    .pw-chat-image-preview,.secretary-message-image img
+){
+    border-color: #425a7b !important;
+}
+@media (prefers-contrast: more) {
+    html[data-primeway-theme="dark"] {
+        --pw-night-muted: #e6f0ff;
+        --pw-night-border: #6c86a8;
+    }
+}
+
+/* Componentes discretos de avisos e ícones ainda claros em portais específicos. */
+html[data-primeway-theme="dark"] body :is(
+    .notification-item,.notification-item.unread,
+    .student-notification-item,.student-notification-item.unread,
+    .settings-card-icon,.professor-card-icon,.professor-quick-card > i:first-child,
+    .activity-status,.activity-subject,.activity-item-icon,
+    .pw-chat-network-status,.pw-chat-recording-cancel,
+    .enrollment-danger,.enrollment-secondary,
+    .secretary-chat-suspension-button.is-suspended,
+    .teacher-notification-icon,.notification-icon,
+    .professor-communication-links > a > i
+){
+    background: #253d5c !important;
+    color: #dbeaff !important;
+    border-color: #435e80 !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .notification-item:hover,.notification-item.unread:hover,
+    .student-notification-item:hover,.activity-item:hover,
+    .professor-communication-links a:hover
+){
+    background: #2a4567 !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .pw-chat-network-status,.enrollment-danger
+){
+    background: #483723 !important;
+    color: #ffe0a0 !important;
+    border-color: #8a6a43 !important;
+}
+html[data-primeway-theme="dark"] body :is(
+    .pw-chat-audio-button.is-recording,.pw-chat-recording-status
+){
+    background: #4a2733 !important;
+    color: #ffd4d4 !important;
+    border-color: #915468 !important;
+}

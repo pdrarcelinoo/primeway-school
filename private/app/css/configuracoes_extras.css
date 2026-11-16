@@ -1,0 +1,61 @@
+/* Módulos adicionais nas Configurações: visual responsivo PrimeWay e modo noturno. */
+.pw-settings-hub{margin:24px 0 32px;display:grid;gap:19px}
+.pw-settings-hub-header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.pw-settings-hub-header h2{font-size:clamp(20px,3vw,29px);color:#27418b;margin:2px 0 6px}
+.pw-settings-hub-header p{margin:0;color:#617087;font-size:13px;line-height:1.6}
+.pw-settings-panel{background:#fff;border:1px solid #dce4ef;border-radius:16px;padding:22px 23px;box-shadow:0 8px 24px #13274c0b}
+.pw-settings-panel h3{color:#273f83;font-size:18px;margin:0 0 9px}
+.pw-settings-panel p{color:#52637c;line-height:1.55;margin:6px 0 12px;font-size:13px}
+.pw-settings-note{color:#566780!important;font-size:12px!important;line-height:1.65!important}
+.pw-settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.pw-settings-field{display:grid;gap:7px;min-width:0;color:#2e466c;font-size:13px;font-weight:650}
+.pw-settings-field.full{grid-column:1/-1}
+.pw-settings-field input,.pw-settings-field textarea,.pw-settings-field select{
+    box-sizing:border-box;min-height:41px;width:100%;border:1px solid #bcc9dc;
+    border-radius:9px;padding:10px 12px;background:#fff;color:#1a2f4c;
+    font:normal 14px/1.45 Arial,sans-serif
+}
+.pw-settings-field textarea{min-height:90px;resize:vertical}
+.pw-settings-option{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#284266;line-height:1.45}
+.pw-settings-option input{width:18px;height:18px;accent-color:#2b4e90;flex-shrink:0}
+.pw-settings-meta{display:flex;flex-wrap:wrap;gap:9px 12px;margin:13px 0}
+.pw-settings-status{display:inline-flex;gap:6px;align-items:center;border-radius:999px;background:#e8f2fc;color:#26487c;padding:5px 10px;font-size:12px;font-weight:700}
+.pw-settings-status.is-secure{background:#def2e7;color:#1b6544}
+.pw-settings-status.is-pending{background:#fff0d1;color:#80511d}
+.pw-settings-links{display:flex;gap:9px;flex-wrap:wrap;margin:13px 0 5px}
+.pw-settings-links a{display:inline-flex;align-items:center;gap:7px;border:1px solid #bdcce2;
+    border-radius:9px;padding:10px 13px;color:#254a89;background:#f8fbff;
+    text-decoration:none;font-size:12.5px;font-weight:750}
+.pw-settings-links a:hover{background:#ebf2ff}
+.pw-settings-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12.5px}
+.pw-settings-table td,.pw-settings-table th{padding:10px;border-bottom:1px solid #e1e7ef;text-align:left;vertical-align:top}
+.pw-settings-table th{color:#344b6e;background:#f5f8fd}
+.pw-settings-table td{color:#4b607b}
+.pw-settings-submit{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.pw-settings-submit button{border:none;border-radius:10px;padding:12px 18px;background:#2c4e91;color:white;font-weight:750;cursor:pointer}
+.pw-settings-submit button:disabled{opacity:.6;cursor:wait}
+.pw-settings-feedback{font-size:13px;color:#275681}
+.pw-privacy-page{min-height:100vh;padding:28px max(24px,calc((100vw - 900px)/2));background:#f5f7fa;color:#1b2f4d}
+.pw-privacy-page h1{color:#244085;font-size:30px}
+.pw-privacy-page h2{color:#264786;margin:28px 0 10px;font-size:19px}
+.pw-privacy-page p,.pw-privacy-page li{font-size:14px;line-height:1.8;color:#3f526d}
+.pw-privacy-page a{color:#1b50a0}
+html[data-primeway-theme="dark"] body :is(.pw-settings-hub,.pw-settings-panel){color:#e5edf8!important}
+html[data-primeway-theme="dark"] body .pw-settings-panel{background:#16253b!important;border-color:#435979!important}
+html[data-primeway-theme="dark"] body :is(.pw-settings-hub-header h2,.pw-settings-panel h3,.pw-settings-field,.pw-settings-hub-header p,.pw-settings-panel p,.pw-settings-note,.pw-settings-option,.pw-settings-table td,.pw-settings-table th){color:#e4edfa!important}
+html[data-primeway-theme="dark"] body .pw-settings-links a{background:#243956!important;color:#e5efff!important;border-color:#5b7495!important}
+html[data-primeway-theme="dark"] body .pw-settings-status{background:#253d5c!important;color:#d5e8ff!important}
+html[data-primeway-theme="dark"] body .pw-settings-status.is-secure{background:#164637!important;color:#a2edca!important}
+html[data-primeway-theme="dark"] body .pw-settings-status.is-pending{background:#48381c!important;color:#ffe1a1!important}
+html[data-primeway-theme="dark"] body .pw-settings-table th{background:#1f3654!important}
+html[data-primeway-theme="dark"] body .pw-settings-table td{background:#16253b!important;border-color:#405778!important}
+html[data-primeway-theme="dark"] body .pw-privacy-page{background:#0b1423!important;color:#e5edf8!important}
+html[data-primeway-theme="dark"] body .pw-privacy-page :is(h1,h2,p,li,a){color:#e5edf8!important}
+html[data-primeway-theme="dark"] body .pw-settings-submit button{background:#375f9e!important;color:white!important}
+@media(max-width:680px){.pw-settings-panel{padding:17px}.pw-settings-grid{grid-template-columns:1fr}.pw-settings-field.full{grid-column:auto}.pw-settings-hub-header{display:block}}
+
+/* Configurações pessoais: título único acima de todas as opções, sem segundo cabeçalho. */
+.pw-preferences-inner > .pw-settings-hub { margin-top: 0; }
+
+/* A política pessoal preserva o menu escolar em todos os cinco perfis. */
+.pw-privacy-page{min-width:0;flex:1;overflow:auto}

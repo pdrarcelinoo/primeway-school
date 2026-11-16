@@ -1,0 +1,3 @@
+-- Execute pelo painel/console administrativo depois da instalação validada.
+-- Remove exclusivamente a conta temporária de migrations deste projeto.
+DROP USER 'primeway_migrate'@'%';

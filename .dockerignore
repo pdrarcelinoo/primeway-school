@@ -1,0 +1,13 @@
+**/.git
+**/.env
+**/.env.*
+**/tests
+**/docs
+**/deploy
+**/storage
+**/database.local.php
+**/database.migration.local.php
+public/.primeway-generated
+SOURCE-SHA256.txt
+verify-source.ps1
+github-private-repo/

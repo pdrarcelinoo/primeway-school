@@ -1,0 +1,1210 @@
+/*====================================================
+            ALUNOS - PRIMEWAY SCHOOL
+====================================================*/
+
+
+/*====================================================
+                    PÁGINA
+====================================================*/
+
+.students-page {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+
+    padding:
+        30px
+        32px
+        45px;
+
+    background: var(--principal);
+}
+
+
+/*====================================================
+                    CABEÇALHO
+====================================================*/
+
+.students-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 25px;
+}
+
+
+.students-header > div:first-child {
+    min-width: 0;
+}
+
+
+.students-header h1 {
+    margin: 4px 0 6px;
+
+    color: var(--secundaria);
+
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+.students-header p {
+    margin: 0;
+
+    color: var(--texto-secundario);
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/*====================================================
+                NOVO ALUNO
+====================================================*/
+
+.new-student-button {
+    min-height: 42px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        0
+        17px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--secundaria);
+
+    color: var(--branco);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0
+        6px
+        16px
+        rgba(
+            30,
+            58,
+            138,
+            .10
+        );
+
+    transition:
+        background var(--transicao),
+        transform var(--transicao),
+        box-shadow var(--transicao);
+}
+
+
+.new-student-button:hover {
+    background: var(--primaria);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0
+        8px
+        20px
+        rgba(
+            211,
+            175,
+            55,
+            .16
+        );
+}
+
+
+/*====================================================
+                RESUMO DE ALUNOS
+====================================================*/
+
+.students-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+}
+
+
+/*
+    A estrutura base de:
+
+    .summary-card
+    .summary-icon
+    .summary-icon.warning
+
+    é controlada por components.css.
+*/
+
+.students-summary .summary-card strong {
+    font-size: 19px;
+}
+
+
+/*====================================================
+                    PAINEL
+====================================================*/
+
+.students-panel {
+    min-width: 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(
+            30,
+            58,
+            138,
+            .05
+        );
+
+    border-radius: 16px;
+
+    background: var(--branco);
+
+    box-shadow: var(--sombra-p);
+}
+
+
+/*====================================================
+                CABEÇALHO DO PAINEL
+====================================================*/
+
+.students-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    padding:
+        20px
+        22px;
+
+    border-bottom:
+        1px solid
+        var(--borda-clara);
+}
+
+
+.students-panel-header > div:first-child {
+    min-width: 0;
+}
+
+
+.students-panel-header h2 {
+    margin: 0 0 4px;
+
+    color: var(--secundaria);
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.students-panel-header p {
+    margin: 0;
+
+    color: var(--texto-claro);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/*====================================================
+                AÇÕES / FILTROS
+====================================================*/
+
+.students-actions {
+    min-width: 0;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/*====================================================
+                    PESQUISA
+====================================================*/
+
+.students-search {
+    position: relative;
+
+    width: 220px;
+}
+
+
+.students-search i {
+    position: absolute;
+
+    top: 50%;
+    left: 12px;
+
+    z-index: 1;
+
+    transform: translateY(-50%);
+
+    color: var(--texto-claro);
+
+    font-size: 10px;
+
+    pointer-events: none;
+}
+
+
+.students-search input,
+.students-actions select {
+    height: 38px;
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: var(--cinza-50);
+
+    color: #374151;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+
+    transition:
+        border-color var(--transicao),
+        background var(--transicao),
+        box-shadow var(--transicao);
+}
+
+
+.students-search input {
+    width: 100%;
+
+    padding:
+        0
+        12px
+        0
+        33px;
+}
+
+
+.students-actions select {
+    min-width: 120px;
+
+    padding:
+        0
+        28px
+        0
+        10px;
+
+    cursor: pointer;
+}
+
+
+.students-search input::placeholder {
+    color: var(--texto-claro);
+}
+
+
+.students-search input:focus,
+.students-actions select:focus {
+    border-color: var(--primaria);
+
+    background: var(--branco);
+
+    box-shadow:
+        0
+        0
+        0
+        3px
+        rgba(
+            211,
+            175,
+            55,
+            .10
+        );
+}
+
+
+/*====================================================
+                    TABELA
+====================================================*/
+
+.students-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.students-table {
+    width: 100%;
+    min-width: 850px;
+
+    border-collapse: collapse;
+}
+
+
+.students-table th {
+    padding:
+        12px
+        16px;
+
+    background: #FAFAFA;
+
+    color: var(--texto-secundario);
+
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+
+    white-space: nowrap;
+}
+
+
+.students-table td {
+    padding:
+        13px
+        16px;
+
+    border-top:
+        1px solid
+        var(--cinza-100);
+
+    color: #4B5563;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+
+    vertical-align: middle;
+}
+
+
+.students-table tbody tr {
+    transition: background var(--transicao);
+}
+
+
+.students-table tbody tr:hover {
+    background: #FFFEF7;
+}
+
+
+/*====================================================
+                CÉLULA DO ALUNO
+====================================================*/
+
+.student-cell {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.student-avatar {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #EEF4FF;
+
+    color: var(--secundaria);
+
+    font-size: 11px;
+}
+
+
+.student-cell > div:last-child {
+    min-width: 0;
+}
+
+
+.student-cell strong {
+    display: block;
+
+    overflow: hidden;
+
+    color: #374151;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/*====================================================
+                STATUS DO ALUNO
+====================================================*/
+
+/*
+    .status-badge e seus estados:
+
+    .active
+    .pending
+    .inactive
+
+    são controlados globalmente por components.css.
+*/
+
+
+/*====================================================
+                AÇÕES DO ALUNO
+====================================================*/
+
+.student-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.student-action-button {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 7px;
+
+    background: var(--cinza-100);
+
+    color: var(--texto-secundario);
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transicao),
+        color var(--transicao),
+        transform var(--transicao);
+}
+
+
+.student-action-button:hover {
+    background: #EEF4FF;
+
+    color: var(--secundaria);
+
+    transform: translateY(-1px);
+}
+
+
+.student-action-button.delete:hover {
+    background: var(--erro-fundo);
+
+    color: var(--erro);
+}
+
+
+/*====================================================
+                ESTADO VAZIO
+====================================================*/
+
+.students-empty {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        45px
+        20px;
+
+    color: var(--texto-secundario);
+
+    text-align: center;
+}
+
+
+.students-empty.active {
+    display: flex;
+}
+
+
+.students-empty i {
+    margin-bottom: 3px;
+
+    color: var(--cinza-300);
+
+    font-size: 28px;
+}
+
+
+.students-empty strong {
+    color: #4B5563;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+
+.students-empty span {
+    color: var(--texto-claro);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+}
+
+
+/*====================================================
+                    MODAIS
+====================================================*/
+
+.student-modal,
+.student-view-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+}
+
+
+.student-view-modal {
+    z-index: 1100;
+}
+
+
+.student-modal.active,
+.student-view-modal.active {
+    display: flex;
+}
+
+
+/*====================================================
+                OVERLAYS DOS MODAIS
+====================================================*/
+
+.student-modal-overlay,
+.student-view-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(
+            20,
+            27,
+            45,
+            .48
+        );
+
+    backdrop-filter: blur(3px);
+}
+
+
+/*====================================================
+                CAIXAS DOS MODAIS
+====================================================*/
+
+.student-modal-box,
+.student-view-box {
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            500px,
+            100%
+        );
+
+    max-height:
+        calc(
+            100vh -
+            30px
+        );
+
+    overflow-y: auto;
+
+    border-radius: var(--raio-xl);
+
+    background: var(--branco);
+
+    box-shadow: var(--sombra-g);
+}
+
+
+/*====================================================
+            CABEÇALHOS DOS MODAIS
+====================================================*/
+
+.student-modal-header,
+.student-view-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding:
+        20px
+        22px;
+
+    border-bottom:
+        1px solid
+        var(--borda-clara);
+}
+
+
+.student-modal-header > div,
+.student-view-header > div {
+    min-width: 0;
+}
+
+
+.student-modal-header h2,
+.student-view-header h2 {
+    margin: 4px 0 0;
+
+    color: var(--secundaria);
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/*====================================================
+                FECHAR MODAIS
+====================================================*/
+
+.student-modal-close,
+.student-view-close {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 9px;
+
+    background: var(--cinza-100);
+
+    color: var(--texto-secundario);
+
+    cursor: pointer;
+
+    transition:
+        background var(--transicao),
+        color var(--transicao);
+}
+
+
+.student-modal-close:hover,
+.student-view-close:hover {
+    background: var(--cinza-200);
+
+    color: var(--secundaria);
+}
+
+
+/*====================================================
+                FORMULÁRIO DO ALUNO
+====================================================*/
+
+.student-form {
+    padding: 22px;
+}
+
+
+/*
+    .form-group, inputs, selects e .form-grid
+    possuem suas estruturas base em components.css.
+*/
+
+.student-form > .form-group {
+    margin-bottom: 14px;
+}
+
+
+.student-form > .form-grid {
+    margin-bottom: 14px;
+}
+
+
+.student-form .form-grid .form-group {
+    margin-bottom: 0;
+}
+
+
+.student-form input,
+.student-form select {
+    min-height: 40px;
+
+    font-size: 10px;
+}
+
+
+/*====================================================
+            AÇÕES DO FORMULÁRIO
+====================================================*/
+
+.student-form-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap: 10px;
+
+    margin-top: 19px;
+}
+
+
+/*====================================================
+                VISUALIZAR ALUNO
+====================================================*/
+
+.student-view-header {
+    justify-content: flex-start;
+}
+
+
+.student-view-avatar {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #EEF4FF;
+
+    color: var(--secundaria);
+
+    font-size: 17px;
+}
+
+
+.student-view-close {
+    margin-left: auto;
+}
+
+
+/*====================================================
+            CONTEÚDO DA VISUALIZAÇÃO
+====================================================*/
+
+.student-view-content {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap: 11px;
+
+    padding: 22px;
+}
+
+
+.student-view-item {
+    min-width: 0;
+
+    padding: 13px;
+
+    border:
+        1px solid
+        var(--borda-clara);
+
+    border-radius: 10px;
+
+    background: #FAFAFA;
+}
+
+
+.student-view-item.full {
+    grid-column:
+        1 /
+        -1;
+}
+
+
+.student-view-item span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--texto-claro);
+
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+}
+
+
+.student-view-item strong {
+    display: block;
+
+    overflow-wrap: anywhere;
+
+    color: #374151;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/*====================================================
+                DESKTOP MENOR
+====================================================*/
+
+@media (max-width: 1200px) {
+
+    .students-page {
+        padding:
+            28px
+            26px
+            40px;
+    }
+
+
+    .students-summary {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(
+                    0,
+                    1fr
+                )
+            );
+    }
+
+}
+
+
+/*====================================================
+                    TABLET
+====================================================*/
+
+@media (max-width: 1000px) {
+
+    .students-page {
+        padding:
+            25px
+            22px
+            38px;
+    }
+
+
+    .students-panel-header {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 15px;
+    }
+
+
+    .students-actions {
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+
+    .students-search {
+        flex:
+            1
+            1
+            220px;
+
+        width: auto;
+    }
+
+
+    .students-actions select {
+        flex:
+            1
+            1
+            130px;
+    }
+
+}
+
+
+/*====================================================
+                    MOBILE
+====================================================*/
+
+@media (max-width: 750px) {
+
+    /*
+        .app-layout e a sidebar administrativa são
+        controlados globalmente por components.css.
+    */
+
+    .students-page {
+        padding:
+            20px
+            18px
+            35px;
+    }
+
+
+    .students-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .students-header h1 {
+        font-size: 23px;
+    }
+
+
+    .new-student-button {
+        width: 100%;
+    }
+
+
+    .students-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .students-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .students-search,
+    .students-actions select {
+        width: 100%;
+    }
+
+
+    .students-panel-header {
+        padding:
+            18px
+            16px;
+    }
+
+
+    .student-form {
+        padding: 18px;
+    }
+
+
+    .student-view-content {
+        padding: 18px;
+    }
+
+}
+
+
+/*====================================================
+                CELULAR PEQUENO
+====================================================*/
+
+@media (max-width: 500px) {
+
+    .students-page {
+        padding:
+            18px
+            12px
+            30px;
+    }
+
+
+    .students-header h1 {
+        font-size: 21px;
+    }
+
+
+    .students-header p {
+        font-size: 10px;
+    }
+
+
+    .students-panel-header h2 {
+        font-size: 15px;
+    }
+
+
+    .students-table {
+        min-width: 780px;
+    }
+
+
+    .students-table th {
+        padding:
+            11px
+            13px;
+    }
+
+
+    .students-table td {
+        padding:
+            12px
+            13px;
+    }
+
+
+    .student-modal-box,
+    .student-view-box {
+        border-radius: 14px;
+    }
+
+
+    .student-modal-header,
+    .student-view-header {
+        padding:
+            17px
+            16px;
+    }
+
+
+    .student-form {
+        padding: 16px;
+    }
+
+
+    .student-view-content,
+    .student-form-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    .student-view-content {
+        padding: 16px;
+    }
+}
+
+
+/*====================================================
+                TELAS MUITO PEQUENAS
+====================================================*/
+
+@media (max-width: 360px) {
+
+    .students-page {
+        padding:
+            15px
+            9px
+            25px;
+    }
+
+
+    .students-panel-header {
+        padding:
+            15px
+            12px;
+    }
+
+
+    .student-form,
+    .student-view-content {
+        padding: 13px;
+    }
+
+}
+
+
+.student-form small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--texto-secundario);
+
+    font:
+        10px/1.4
+        Arial,
+        sans-serif;
+}

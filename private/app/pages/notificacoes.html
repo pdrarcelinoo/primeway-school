@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Notificações | PrimeWay School</title>
+
+
+    <!-- ==================================================
+                    COMPONENTES GLOBAIS
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+
+    <!-- ==================================================
+                    CSS DA PÁGINA
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/notificacoes.css?v=20261006-2"
+    >
+
+
+    <!-- ==================================================
+                    GOOGLE FONTS - CINZEL
+    =================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==================================================
+                    FONT AWESOME
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="app-layout">
+
+
+        <!-- ==================================================
+                            SIDEBAR
+        =================================================== -->
+
+        <aside
+            class="sidebar"
+            aria-label="Menu principal"
+        >
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../img/logo.png"
+                    alt="PrimeWay School"
+                >
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav
+                class="sidebar-menu"
+                aria-label="Navegação principal"
+            >
+
+
+                <!-- INÍCIO -->
+
+                <a href="dashboard.html">
+
+                    <i
+                        class="fa-solid fa-house"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Início
+                    </span>
+
+                </a>
+
+
+                <!-- PROFESSOR -->
+
+                <a href="professores.html">
+
+                    <i
+                        class="fa-solid fa-chalkboard-user"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Professores
+                    </span>
+
+                </a>
+
+
+                <!-- ALUNOS -->
+
+                <a href="alunos.html">
+
+                    <i
+                        class="fa-solid fa-user-graduate"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Alunos
+                    </span>
+
+                </a>
+
+
+                <!-- RESPONSÁVEIS -->
+
+                <a href="responsaveis.html">
+
+                    <i
+                        class="fa-solid fa-people-roof"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Responsáveis
+                    </span>
+
+                </a>
+
+
+                <!-- TURMAS -->
+
+                <a href="turmas.html">
+
+                    <i
+                        class="fa-solid fa-users"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Turmas
+                    </span>
+
+                </a>
+
+
+                <!-- DISCIPLINAS -->
+
+                <a href="disciplinas.html">
+
+                    <i
+                        class="fa-solid fa-book-open"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Disciplinas
+                    </span>
+
+                </a>
+
+
+                <!-- CHAT -->
+
+                <a href="admin_chat.html">
+
+                    <i
+                        class="fa-solid fa-comments"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Chat
+                    </span>
+
+                </a>
+
+
+                <!-- CALENDÁRIO -->
+
+                <a href="calendario.html">
+
+                    <i
+                        class="fa-solid fa-calendar-days"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Calendário
+                    </span>
+
+                </a>
+
+
+                <!-- NOTIFICAÇÕES -->
+
+                <a
+                    href="notificacoes.html"
+                    class="active"
+                    aria-current="page"
+                >
+
+                    <i
+                        class="fa-solid fa-bell"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Notificações
+                    </span>
+
+                </a>
+
+
+                <!-- CONFIGURAÇÕES -->
+
+                <a href="configuracoes.html">
+
+                    <i
+                        class="fa-solid fa-gear"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Configurações
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- ==================================================
+                            SAIR
+            =================================================== -->
+
+            <div class="sidebar-bottom">
+
+                <button
+                    type="button"
+                    id="logoutButton"
+                >
+
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Sair
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ==================================================
+                            CONTEÚDO
+        =================================================== -->
+
+        <main class="notifications-page">
+
+
+            <!-- ==================================================
+                            CABEÇALHO
+            =================================================== -->
+
+            <header class="notifications-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        Comunicação
+                    </span>
+
+                    <h1>
+                        Notificações
+                    </h1>
+
+                    <p>
+                        Acompanhe avisos, eventos, atividades
+                        e informações importantes.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="new-notification-button"
+                    id="newNotificationButton"
+                    aria-haspopup="dialog"
+                    aria-controls="notificationModal"
+                >
+
+                    <i
+                        class="fa-solid fa-plus"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Novo aviso
+                    </span>
+
+                </button>
+
+
+            </header>
+
+
+            <!-- ==================================================
+                            CARDS
+            =================================================== -->
+
+            <section
+                class="notifications-summary"
+                aria-label="Resumo das notificações"
+            >
+
+
+                <!-- TOTAL -->
+
+                <article class="summary-card">
+
+                    <div class="summary-icon">
+
+                        <i
+                            class="fa-solid fa-bell"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="totalNotifications">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- NÃO LIDAS -->
+
+                <article class="summary-card">
+
+                    <div class="summary-icon unread">
+
+                        <i
+                            class="fa-solid fa-envelope"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Não lidas
+                        </span>
+
+                        <strong id="unreadNotifications">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- EVENTOS -->
+
+                <article class="summary-card">
+
+                    <div class="summary-icon">
+
+                        <i
+                            class="fa-solid fa-calendar-check"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Eventos
+                        </span>
+
+                        <strong id="eventNotifications">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- AVISOS -->
+
+                <article class="summary-card">
+
+                    <div class="summary-icon warning">
+
+                        <i
+                            class="fa-solid fa-bullhorn"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Avisos
+                        </span>
+
+                        <strong id="noticeNotifications">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- ==================================================
+                            PAINEL
+            =================================================== -->
+
+            <section
+                class="notifications-panel"
+                aria-labelledby="notificationsPanelTitle"
+            >
+
+
+                <div class="notifications-panel-header">
+
+
+                    <div>
+
+                        <h2 id="notificationsPanelTitle">
+                            Central de notificações
+                        </h2>
+
+                        <p>
+                            Consulte e organize as notificações do sistema.
+                        </p>
+
+                    </div>
+
+
+                    <!-- CONTROLES -->
+
+                    <div class="notifications-controls">
+
+
+                        <!-- PESQUISA -->
+
+                        <div
+                            class="notifications-search"
+                            role="search"
+                        >
+
+                            <i
+                                class="fa-solid fa-magnifying-glass"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="search"
+                                id="notificationSearch"
+                                placeholder="Pesquisar..."
+                                autocomplete="off"
+                                aria-label="Pesquisar notificações"
+                            >
+
+                        </div>
+
+
+                        <!-- TIPO -->
+
+                        <select
+                            id="notificationTypeFilter"
+                            aria-label="Filtrar por tipo"
+                        >
+
+                            <option value="">
+                                Todos os tipos
+                            </option>
+
+                            <option value="Aviso">
+                                Aviso
+                            </option>
+
+                            <option value="Evento">
+                                Evento
+                            </option>
+
+                            <option value="Prova">
+                                Prova
+                            </option>
+
+                            <option value="Atividade">
+                                Atividade
+                            </option>
+
+                            <option value="Reunião">
+                                Reunião
+                            </option>
+
+                            <option value="Sistema">
+                                Sistema
+                            </option>
+
+                        </select>
+
+
+                        <!-- STATUS -->
+
+                        <select
+                            id="notificationStatusFilter"
+                            aria-label="Filtrar por status"
+                        >
+
+                            <option value="">
+                                Todas
+                            </option>
+
+                            <option value="unread">
+                                Não lidas
+                            </option>
+
+                            <option value="read">
+                                Lidas
+                            </option>
+
+                        </select>
+
+
+                        <label id="notificationHistoryLabel"><input type="checkbox" id="notificationHistory"> Incluir canceladas (histórico)</label>
+                        <!-- MARCAR TODAS -->
+
+                        <button
+                            type="button"
+                            class="mark-all-button"
+                            id="markAllReadButton"
+                            aria-controls="notificationsList"
+                        >
+
+                            <i
+                                class="fa-solid fa-check-double"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Marcar lidas
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ==================================================
+                        LISTA DE NOTIFICAÇÕES
+                =================================================== -->
+
+                <div
+                    class="notifications-list"
+                    id="notificationsList"
+                    aria-live="polite"
+                    aria-relevant="additions removals"
+                ></div>
+
+
+                <!-- ==================================================
+                        ESTADO VAZIO
+                =================================================== -->
+
+                <div
+                    class="notifications-empty"
+                    id="notificationsEmpty"
+                >
+
+                    <i
+                        class="fa-regular fa-bell-slash"
+                        aria-hidden="true"
+                    ></i>
+
+                    <strong>
+                        Nenhuma notificação encontrada
+                    </strong>
+
+                    <span>
+                        Novas notificações aparecerão aqui.
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- ==================================================
+                    MODAL NOVO AVISO
+    =================================================== -->
+
+    <div
+        class="notification-modal"
+        id="notificationModal"
+        aria-hidden="true"
+    >
+
+
+        <div
+            class="notification-modal-overlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <div
+            class="notification-modal-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="notificationModalTitle"
+        >
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="notification-modal-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        Secretaria
+                    </span>
+
+                    <h2 id="notificationModalTitle">
+                        Novo aviso
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="notification-modal-close"
+                    id="notificationModalClose"
+                    aria-label="Fechar cadastro de aviso"
+                >
+
+                    <i
+                        class="fa-solid fa-xmark"
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- ==================================================
+                            FORMULÁRIO
+            =================================================== -->
+
+            <form
+                class="notification-form"
+                id="notificationForm"
+            >
+
+
+                <!-- TÍTULO -->
+
+                <div class="form-group">
+
+                    <label for="notificationTitle">
+                        Título
+                    </label>
+
+                    <input
+                        type="text"
+                        id="notificationTitle"
+                        required
+                        maxlength="80"
+                        autocomplete="off"
+                        placeholder="Ex: Comunicado importante"
+                    >
+
+                </div>
+
+
+                <!-- TIPO / DESTINATÁRIO -->
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="notificationType">
+                            Tipo
+                        </label>
+
+                        <select
+                            id="notificationType"
+                            required
+                        >
+
+                            <option value="Aviso">
+                                Aviso
+                            </option>
+
+                            <option value="Sistema">
+                                Sistema
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="notificationAudience">
+                            Destinatário
+                        </label>
+
+                        <select
+                            id="notificationAudience"
+                            required
+                        >
+
+                            <option value="Todos">
+                                Todos
+                            </option>
+
+                            <option value="Alunos">
+                                Alunos
+                            </option>
+
+                            <option value="Responsáveis">
+                                Responsáveis
+                            </option>
+
+                            <option value="Professores">
+                                Professores
+                            </option>
+
+                            <option value="Secretaria">
+                                Secretaria
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- MENSAGEM -->
+
+                <div class="form-group">
+
+                    <label for="notificationMessage">
+                        Mensagem
+                    </label>
+
+                    <textarea
+                        id="notificationMessage"
+                        required
+                        maxlength="500"
+                        placeholder="Digite o conteúdo do aviso..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- AÇÕES -->
+
+                <div class="notification-form-actions">
+
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="notificationCancelButton"
+                    >
+
+                        Cancelar
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+
+                        <i
+                            class="fa-solid fa-paper-plane"
+                            aria-hidden="true"
+                        ></i>
+
+                        Publicar aviso
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ==================================================
+                VISUALIZAR NOTIFICAÇÃO
+    =================================================== -->
+
+    <div
+        class="notification-view-modal"
+        id="notificationViewModal"
+        aria-hidden="true"
+    >
+
+
+        <div
+            class="notification-view-overlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <div
+            class="notification-view-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="viewNotificationTitle"
+        >
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="notification-view-header">
+
+
+                <div
+                    class="notification-view-icon"
+                    id="viewNotificationIcon"
+                >
+
+                    <i
+                        class="fa-solid fa-bell"
+                        aria-hidden="true"
+                    ></i>
+
+                </div>
+
+
+                <div>
+
+                    <span
+                        class="notification-view-type"
+                        id="viewNotificationType"
+                    >
+                        Aviso
+                    </span>
+
+                    <h2 id="viewNotificationTitle">
+                        Notificação
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="notification-view-close"
+                    id="notificationViewClose"
+                    aria-label="Fechar notificação"
+                >
+
+                    <i
+                        class="fa-solid fa-xmark"
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- ==================================================
+                            CONTEÚDO
+            =================================================== -->
+
+            <div class="notification-view-content">
+
+
+                <!-- INFORMAÇÕES -->
+
+                <div class="notification-view-info">
+
+
+                    <!-- DESTINATÁRIO -->
+
+                    <div>
+
+                        <span>
+                            Destinatário
+                        </span>
+
+                        <strong id="viewNotificationAudience">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <!-- DATA -->
+
+                    <div>
+
+                        <span>
+                            Data
+                        </span>
+
+                        <strong id="viewNotificationDate">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- MENSAGEM -->
+
+                <div class="notification-view-message">
+
+                    <span>
+                        Mensagem
+                    </span>
+
+                    <p id="viewNotificationMessage">
+                        -
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ==================================================
+                            AÇÕES
+            =================================================== -->
+
+            <div class="notification-view-actions">
+
+
+                <!-- LIDA / NÃO LIDA -->
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="toggleReadButton"
+                >
+
+                    <i
+                        class="fa-solid fa-envelope-open"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Marcar como lida
+                    </span>
+
+                </button>
+
+
+                <!-- EXCLUIR -->
+
+                <button
+                    type="button"
+                    class="delete-button"
+                    id="deleteNotificationButton"
+                >
+
+                    <i
+                        class="fa-solid fa-trash"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Cancelar notificação
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+<!-- ==================================================
+                        JAVASCRIPT
+    =================================================== -->
+
+    <script src="../js/core.js?v=20261007-1"></script>
+    <script src="../js/notificacoes.js?v=20261007-1"></script>
+
+
+</body>
+
+</html>

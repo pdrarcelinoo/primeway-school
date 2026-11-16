@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessos administrativos TCC | PrimeWay School</title>
+  <link rel="icon" type="image/png" href="/img/logo.png?v=20261026">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/administradores_tcc.css?v=20261027-2">
+</head>
+<body>
+  <main class="accounts-wrap">
+    <header class="accounts-header">
+      <a href="configuracoes.html" class="back">← Voltar às configurações</a>
+      <div class="brand"><img src="../img/logo.png" alt="Logo PrimeWay School"><div><p class="eyebrow">PrimeWay School · Homologação TCC</p><h1>Acessos administrativos</h1></div></div>
+      <p class="intro">Todos os administradores do PrimeWay School podem acessar esta página para consultar os acessos existentes, cadastrar novos administradores e alterar e-mails ou senhas.</p>
+    </header>
+    <section class="notice" aria-label="Segurança">
+      <strong>Proteja as credenciais.</strong> Escolha as senhas nesta página. Não compartilhe senhas por mensagens nem reutilize a senha do Administrador atual. Guarde os acessos em local seguro.
+    </section>
+    <div id="pageStatus" class="page-status" role="status" aria-live="polite">Verificando sua sessão...</div>
+    <section class="management-section" aria-label="Cadastro de novo administrador">
+      <div class="section-heading">
+        <div><h2>Gerenciar administradores</h2><p>Somente administradores autenticados podem criar novos acessos.</p></div>
+        <button type="button" id="newAdminButton" class="create-btn new-admin-button" aria-expanded="false" aria-controls="newAdminPanel">+ Novo administrador</button>
+      </div>
+      <section id="newAdminPanel" class="new-admin-panel" hidden>
+        <h3>Cadastrar novo administrador</h3>
+        <form id="newAdminForm" autocomplete="off">
+          <div class="new-form-grid">
+            <div class="field"><label for="newAdminName">Nome completo</label><input id="newAdminName" type="text" maxlength="120" minlength="2" autocomplete="off" required></div>
+            <div class="field"><label for="newAdminEmail">E-mail de login</label><input id="newAdminEmail" type="email" maxlength="190" autocomplete="off" required></div>
+            <div class="field"><label for="newAdminPassword">Senha da nova conta (mín. 12 caracteres)</label><input id="newAdminPassword" type="password" autocomplete="new-password" required minlength="12" maxlength="72"></div>
+            <div class="field"><label for="newAdminConfirm">Confirmar senha da nova conta</label><input id="newAdminConfirm" type="password" autocomplete="new-password" required minlength="12" maxlength="72"></div>
+            <div class="field"><label for="newAdminAuth">Sua senha de Administrador para autorizar</label><input id="newAdminAuth" type="password" autocomplete="current-password" required></div>
+          </div>
+          <p class="hint">A nova conta terá acesso completo como Administrador. Não compartilhe senhas no chat.</p>
+          <button type="submit" id="saveNewAdmin" class="create-btn save-new-button">Cadastrar administrador</button>
+          <p id="newAdminFeedback" class="feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </section>
+    <section class="management-section" aria-label="Administradores cadastrados">
+      <div class="section-heading"><div><h2>Administradores cadastrados</h2><p>Os acessos existentes permanecem válidos.</p></div></div>
+      <div id="adminList" class="accounts-grid"></div>
+    </section>
+    <section class="management-section pending-section" id="pendingSection" aria-label="Cadastros sugeridos para o grupo">
+      <h2>Cadastros sugeridos para o TCC</h2>
+      <p>Para os nomes indicados anteriormente, você também pode usar os formulários abaixo.</p>
+    <section id="accounts" class="accounts-grid" aria-label="Pessoas autorizadas">
+      <article class="account-card" data-account="mizael"><h2>Mizael</h2><p class="state">Verificando cadastro...</p></article>
+      <article class="account-card" data-account="ana-julia"><h2>Ana Júlia</h2><p class="state">Verificando cadastro...</p></article>
+      <article class="account-card" data-account="julia-maniero"><h2>Júlia Maniero</h2><p class="state">Verificando cadastro...</p></article>
+    </section>
+    </section>
+    <footer>As novas contas só serão criadas após a confirmação. O sistema preserva os usuários e seus dados existentes.</footer>
+  </main>
+  <script src="../js/core.js?v=20261007-1"></script>
+  <script src="../js/administradores_tcc.js?v=20261027-3"></script>
+</body>
+</html>

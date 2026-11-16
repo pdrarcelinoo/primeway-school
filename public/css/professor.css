@@ -1,0 +1,321 @@
+/*====================================================
+                PAINEL DO PROFESSOR
+====================================================*/
+
+.professor-page {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 30px 32px 45px;
+    background: var(--principal);
+}
+
+.professor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 26px;
+}
+
+.professor-welcome {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primaria);
+    font: 700 10px Arial, sans-serif;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.professor-header h1 {
+    margin: 0 0 6px;
+    color: var(--secundaria);
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.professor-header p {
+    margin: 0;
+    color: var(--texto-secundario);
+    font: 11px/1.6 Arial, sans-serif;
+}
+
+.professor-date {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 40px;
+    padding: 0 14px;
+    border: 1px solid rgba(30, 58, 138, .05);
+    border-radius: 10px;
+    background: var(--branco);
+    color: var(--secundaria);
+    font: 10px Arial, sans-serif;
+    box-shadow: var(--sombra-p);
+}
+
+.professor-date i {
+    color: var(--primaria);
+}
+
+.professor-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.professor-card {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid rgba(30, 58, 138, .05);
+    border-radius: 14px;
+    background: var(--branco);
+    box-shadow: var(--sombra-p);
+}
+
+.professor-card-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #FBF3D8;
+    color: var(--primaria);
+    font-size: 17px;
+}
+
+.professor-card-content {
+    min-width: 0;
+}
+
+.professor-card-content span {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--texto-secundario);
+    font: 9px Arial, sans-serif;
+}
+
+.professor-card-content strong {
+    color: var(--secundaria);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.professor-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.professor-quick-card {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid rgba(30, 58, 138, .05);
+    border-radius: 13px;
+    background: var(--branco);
+    color: inherit;
+    text-decoration: none;
+    box-shadow: var(--sombra-p);
+    transition:
+        transform var(--transicao),
+        border-color var(--transicao);
+}
+
+.professor-quick-card:hover {
+    border-color: rgba(211, 175, 55, .35);
+    transform: translateY(-2px);
+}
+
+.professor-quick-card > i:first-child {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #EEF4FF;
+    color: var(--secundaria);
+}
+
+.professor-quick-card > i:last-child {
+    color: var(--texto-claro);
+    font-size: 9px;
+}
+
+.professor-quick-card strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secundaria);
+    font: 700 10px Arial, sans-serif;
+}
+
+.professor-quick-card span {
+    display: block;
+    color: var(--texto-claro);
+    font: 8px/1.45 Arial, sans-serif;
+}
+
+.professor-dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.professor-panel {
+    overflow: hidden;
+    border: 1px solid rgba(30, 58, 138, .05);
+    border-radius: 14px;
+    background: var(--branco);
+    box-shadow: var(--sombra-p);
+}
+
+.professor-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--borda-clara);
+}
+
+.professor-panel-header h2 {
+    margin: 0 0 4px;
+    color: var(--secundaria);
+    font-size: 15px;
+}
+
+.professor-panel-header p {
+    margin: 0;
+    color: var(--texto-claro);
+    font: 9px/1.5 Arial, sans-serif;
+}
+
+.professor-dashboard-link {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--secundaria);
+    font: 700 8px Arial, sans-serif;
+    text-decoration: none;
+}
+
+.professor-dashboard-list {
+    display: grid;
+}
+
+.professor-class-preview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px 15px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.professor-class-preview:last-child {
+    border-bottom: none;
+}
+
+.professor-class-preview strong {
+    color: var(--secundaria);
+    font-size: 11px;
+}
+
+.professor-class-preview span,
+.professor-class-preview p {
+    margin: 0;
+    color: var(--texto-secundario);
+    font: 9px Arial, sans-serif;
+}
+
+.professor-class-preview p {
+    grid-column: 1 / -1;
+}
+
+.professor-communication-links {
+    display: grid;
+}
+
+.professor-communication-links a {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    align-items: center;
+    gap: 11px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #F1F1F1;
+    color: inherit;
+    text-decoration: none;
+}
+
+.professor-communication-links a:last-child {
+    border-bottom: none;
+}
+
+.professor-communication-links a:hover {
+    background: #FFFEF7;
+}
+
+.professor-communication-links > a > i {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: #FBF3D8;
+    color: var(--primaria);
+}
+
+.professor-communication-links strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--secundaria);
+    font: 700 10px Arial, sans-serif;
+}
+
+.professor-communication-links span {
+    color: var(--texto-claro);
+    font: 8px/1.45 Arial, sans-serif;
+}
+
+@media (max-width: 1150px) {
+    .professor-cards,
+    .professor-quick-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .professor-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .professor-page {
+        padding: 23px 17px 38px;
+    }
+
+    .professor-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .professor-date {
+        width: 100%;
+    }
+
+    .professor-cards,
+    .professor-quick-grid {
+        grid-template-columns: 1fr;
+    }
+}

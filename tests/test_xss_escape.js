@@ -1,0 +1,20 @@
+/* Testa a função realmente usada pela interface, sem dependências externas. */
+"use strict";
+const fs=require("node:fs");
+const vm=require("node:vm");
+const assert=require("node:assert/strict");
+const path=require("node:path");
+const source=fs.readFileSync(path.join(__dirname,"../public/js/secretaria_matriculas.js"),"utf8");
+const match=source.match(/function escapeHtml\(value\)\{[\s\S]*?\n\}/);
+assert.ok(match,"Função de escape obrigatória");
+const context=vm.createContext({});
+vm.runInContext(match[0]+"; this.escapeHtml=escapeHtml;",context);
+const escapeHtml=context.escapeHtml;
+const attack='<img src=x onerror="alert(1)"> & \'';
+const encoded=escapeHtml(attack);
+assert.equal(encoded,"&lt;img src=x onerror=&quot;alert(1)&quot;&gt; &amp; &#39;");
+assert.ok(!encoded.includes("<img"),"O payload não pode formar um elemento HTML.");
+assert.equal(escapeHtml(null),"");
+assert.equal(escapeHtml(25),"25");
+assert.equal(escapeHtml("Maria João"),"Maria João");
+console.log("Escape HTML: payload XSS, caracteres especiais e dados normais aprovados.");

@@ -1,0 +1,183 @@
+/*
+ * PrimeWay School — acabamento visual compartilhado (TCC 2026).
+ * Somente apresentação: sem alterações em layout estrutural, APIs,
+ * eventos, elementos interativos ou regras de permissão.
+ * Carregado APÓS os temas de cada perfil para harmonizar o conjunto.
+ */
+:root {
+    --pw-finish-navy: #152b63;
+    --pw-finish-blue: #244588;
+    --pw-finish-gold: #c69e3c;
+    --pw-finish-ink: #263648;
+    --pw-finish-muted: #52647a;
+    --pw-finish-line: #e2e8f0;
+    --pw-finish-surface: #ffffff;
+    --pw-finish-shadow: 0 10px 30px rgba(25, 46, 85, .06);
+    --pw-finish-shadow-hover: 0 14px 32px rgba(25, 46, 85, .09);
+}
+
+/* Navegação: contraste consistente entre os cinco portais. */
+body :is(.app-layout, .dashboard) .sidebar {
+    background: linear-gradient(165deg, #224493 0%, #1c397e 52%, #142b5d 100%);
+    border-right: 1px solid rgba(255, 255, 255, .08);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,.28) transparent;
+}
+body :is(.app-layout, .dashboard) .sidebar-menu {
+    gap: 5px;
+}
+body :is(.app-layout, .dashboard) .sidebar-menu a,
+body :is(.app-layout, .dashboard) .sidebar-bottom button {
+    min-height: 44px;
+    border-radius: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+    transition: background-color .18s ease, color .18s ease, box-shadow .18s ease;
+}
+body :is(.app-layout, .dashboard) .sidebar-menu a {
+    color: rgba(255,255,255,.89);
+}
+body :is(.app-layout, .dashboard) .sidebar-menu a i,
+body :is(.app-layout, .dashboard) .sidebar-bottom button i {
+    font-size: 14px;
+}
+body :is(.app-layout, .dashboard) .sidebar-menu a:hover,
+body :is(.app-layout, .dashboard) .sidebar-bottom button:hover {
+    background: rgba(255,255,255,.13);
+    color: #fff;
+}
+body :is(.app-layout, .dashboard) .sidebar-menu a.active,
+body :is(.app-layout, .dashboard) .sidebar-menu a[aria-current="page"] {
+    background: rgba(255,255,255,.18);
+    color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.10);
+}
+body :is(.app-layout, .dashboard) .sidebar-menu a.active::before,
+body :is(.app-layout, .dashboard) .sidebar-menu a[aria-current="page"]::before {
+    background: #f1c963;
+    width: 3px;
+}
+body :is(.app-layout, .dashboard) .sidebar-menu :is(.nav-badge, [data-primeway-intelligent-badge="1"]) {
+    background: #f5ce66;
+    color: #19315f;
+    font-weight: 800;
+    font-size: 11px;
+}
+body :is(.app-layout, .dashboard) .sidebar :is(.primeway-side-profile) {
+    background: rgba(255,255,255,.09);
+    border-color: rgba(255,255,255,.18);
+    border-radius: 13px;
+}
+body :is(.app-layout, .dashboard) .sidebar .primeway-side-profile:hover {
+    background: rgba(255,255,255,.15);
+}
+body :is(.app-layout, .dashboard) .sidebar .primeway-side-profile .primeway-identity strong {
+    color: #fff;
+    font-size: 13px;
+}
+body :is(.app-layout, .dashboard) .sidebar .primeway-side-profile .primeway-identity small {
+    color: rgba(255,255,255,.76);
+    font-size: 11px;
+}
+
+/* Superfícies e títulos: refinamento suave, sem reestruturar os cartões. */
+body :is(.student-page, .guardian-page, .professor-module-page, .secretary-page) {
+    background-color: #f9faf6;
+}
+body :is(.student-page-header, .guardian-page-header, .professor-module-header, .secretary-header,
+          .portal-header, .professor-header) h1 {
+    color: var(--pw-finish-navy);
+    letter-spacing: -.025em;
+    line-height: 1.2;
+}
+body :is(.student-page-header, .guardian-page-header, .professor-module-header, .secretary-header) p {
+    color: var(--pw-finish-muted);
+    font-size: 13px;
+    line-height: 1.65;
+}
+body :is(.student-panel, .guardian-panel, .professor-module-panel, .secretary-panel,
+          .secretary-summary-card, .professor-card, .professor-quick-card, .secretary-quick-card,
+          .dashboard-card, .dashboard-panel, .portal-panel, .perfil-card) {
+    border-color: var(--pw-finish-line);
+    border-radius: 16px;
+    box-shadow: var(--pw-finish-shadow);
+}
+body :is(.student-panel, .guardian-panel, .professor-module-panel, .secretary-panel,
+          .dashboard-panel, .portal-panel, .perfil-card) :is(h2, h3) {
+    letter-spacing: -.012em;
+}
+body :is(.student-panel-heading, .guardian-panel-heading, .professor-module-heading, .secretary-panel-heading) {
+    border-bottom-color: #edf0f5;
+}
+body :is(.student-panel-heading, .guardian-panel-heading, .professor-module-heading,
+          .secretary-panel-heading) p {
+    color: var(--pw-finish-muted);
+    font-size: 12px;
+    line-height: 1.55;
+}
+body :is(.student-panel-link, .guardian-panel-link, .professor-module-link,
+          .secretary-link-button) {
+    font-size: 12px;
+    text-underline-offset: 3px;
+}
+
+/* Botões principais: sem alterar dimensões, estados nem ações existentes. */
+body :is(.primary-button, .secretary-primary-button, .perfil-button,
+          .activity-access-button) {
+    border-radius: 11px;
+    font-weight: 700;
+    transition: box-shadow .18s ease, filter .18s ease;
+}
+body :is(.primary-button, .secretary-primary-button, .perfil-button,
+          .activity-access-button):hover:not(:disabled) {
+    box-shadow: 0 7px 18px rgba(28,58,120,.16);
+    filter: brightness(1.045);
+}
+body :is(.primary-button, .secretary-primary-button, .perfil-button,
+          .activity-access-button):disabled {
+    cursor: not-allowed;
+}
+
+/* Campos e tabelas: leitura clara em telas de apresentação. */
+body :is(.student-toolbar, .guardian-toolbar, .professor-toolbar, .secretary-toolbar)
+:is(input, select) {
+    font-size: 12.5px;
+    border-color: #d7dfea;
+    background-color: #fff;
+}
+body :is(.student-toolbar, .guardian-toolbar, .professor-toolbar, .secretary-toolbar)
+:is(input, select):focus-visible {
+    border-color: var(--pw-finish-blue);
+}
+body :is(.app-layout, .dashboard) :is(button, a, input, select, textarea, [role="link"]):focus-visible {
+    outline: 2px solid #c28e24;
+    outline-offset: 3px;
+}
+/* Restaura foco claro também em campos estilizados com outline:none. */
+body :is(.app-layout, .dashboard) :is(input, select, textarea):focus-visible {
+    box-shadow: 0 0 0 3px rgba(194,142,36,.14);
+}
+body :is(.app-layout, .dashboard) :is(button, input, select, textarea):disabled {
+    opacity: .7;
+}
+
+/* Evita sombras/efeitos para quem prefere menos movimento. */
+@media (prefers-reduced-motion: reduce) {
+    body :is(.app-layout, .dashboard) .sidebar-menu a,
+    body :is(.app-layout, .dashboard) .sidebar-bottom button,
+    body :is(.primary-button, .secretary-primary-button, .perfil-button,
+             .activity-access-button) {
+        transition: none;
+    }
+}
+@media (max-width: 760px) {
+    body :is(.app-layout, .dashboard) .sidebar-menu a,
+    body :is(.app-layout, .dashboard) .sidebar-bottom button {
+        min-height: 44px;
+    }
+    body :is(.student-page-header, .guardian-page-header, .professor-module-header, .secretary-header) p {
+        font-size: 12.5px;
+    }
+}

@@ -1,0 +1,21 @@
+/* Testa os rótulos de auditoria apresentados ao administrador. */
+"use strict";
+const fs=require("node:fs");
+const vm=require("node:vm");
+const assert=require("node:assert/strict");
+const path=require("node:path");
+const src=fs.readFileSync(path.join(__dirname,"../public/js/dashboard.js"),"utf8");
+const anchor=src.match(/    function tituloAuditoria\(acao\) \{[\s\S]*?\n    \}/);
+assert.ok(anchor,"Função de título amigável deve existir");
+const context=vm.createContext({});
+vm.runInContext(anchor[0]+";this.tituloAuditoria=tituloAuditoria;",context);
+const friendly=context.tituloAuditoria;
+assert.equal(friendly("ALTERAR_LEITURA_NOTIFICACAO"),"Leitura de notificação atualizada");
+assert.equal(friendly("ENVIAR_ATIVIDADE"),"Atividade enviada");
+assert.equal(friendly("RETIRAR_ATIVIDADE"),"Atividade retirada");
+assert.equal(friendly("OPERACAO_DESCONHECIDA"),"Operacao desconhecida");
+assert.equal(friendly(null),"Atualização do sistema");
+assert.equal(friendly(""),"Atualização do sistema");
+assert.equal(friendly("teste <img onerror=alert(1)>"),"Teste <img onerror=alert(1)>");
+assert.ok(src.includes("titulo.textContent = tituloAuditoria(item.action);"),"O resultado deve ser usado somente como texto, não HTML");
+console.log("Histórico administrativo: rótulos legíveis e inserção segura via textContent.");

@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Disciplinas | PrimeWay School</title>
+
+
+    <!-- ==================================================
+                    COMPONENTES GLOBAIS
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+
+    <!-- ==================================================
+                    CSS DA PÁGINA
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/disciplinas.css?v=20261006-2"
+    >
+
+
+    <!-- ==================================================
+                    GOOGLE FONTS - CINZEL
+    =================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==================================================
+                    FONT AWESOME
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="app-layout">
+
+
+        <!-- ==================================================
+                            SIDEBAR
+        =================================================== -->
+
+        <aside
+            class="sidebar"
+            aria-label="Menu principal"
+        >
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../img/logo.png"
+                    alt="PrimeWay School"
+                >
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav
+                class="sidebar-menu"
+                aria-label="Navegação principal"
+            >
+
+
+                <!-- INÍCIO -->
+
+                <a href="dashboard.html">
+
+                    <i
+                        class="fa-solid fa-house"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Início
+                    </span>
+
+                </a>
+
+
+                <!-- PROFESSOR -->
+
+                <a href="professores.html">
+
+                    <i
+                        class="fa-solid fa-chalkboard-user"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Professores
+                    </span>
+
+                </a>
+
+
+                <!-- ALUNOS -->
+
+                <a href="alunos.html">
+
+                    <i
+                        class="fa-solid fa-user-graduate"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Alunos
+                    </span>
+
+                </a>
+
+
+                <!-- RESPONSÁVEIS -->
+
+                <a href="responsaveis.html">
+
+                    <i
+                        class="fa-solid fa-people-roof"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Responsáveis
+                    </span>
+
+                </a>
+
+
+                <!-- TURMAS -->
+
+                <a href="turmas.html">
+
+                    <i
+                        class="fa-solid fa-users"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Turmas
+                    </span>
+
+                </a>
+
+
+                <!-- DISCIPLINAS -->
+
+                <a
+                    href="disciplinas.html"
+                    class="active"
+                    aria-current="page"
+                >
+
+                    <i
+                        class="fa-solid fa-book-open"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Disciplinas
+                    </span>
+
+                </a>
+
+
+                <!-- CHAT -->
+
+                <a href="admin_chat.html">
+
+                    <i
+                        class="fa-solid fa-comments"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Chat
+                    </span>
+
+                </a>
+
+
+                <!-- CALENDÁRIO -->
+
+                <a href="calendario.html">
+
+                    <i
+                        class="fa-solid fa-calendar-days"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Calendário
+                    </span>
+
+                </a>
+
+
+                <!-- NOTIFICAÇÕES -->
+
+                <a href="notificacoes.html">
+
+                    <i
+                        class="fa-solid fa-bell"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Notificações
+                    </span>
+
+                </a>
+
+
+                <!-- CONFIGURAÇÕES -->
+
+                <a href="configuracoes.html">
+
+                    <i
+                        class="fa-solid fa-gear"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Configurações
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- ==================================================
+                            SAIR
+            =================================================== -->
+
+            <div class="sidebar-bottom">
+
+                <button
+                    type="button"
+                    id="logoutButton"
+                >
+
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Sair
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ==================================================
+                            CONTEÚDO
+        =================================================== -->
+
+        <main class="subjects-page">
+
+
+            <!-- ==================================================
+                            CABEÇALHO
+            =================================================== -->
+
+            <header class="subjects-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        Administração
+                    </span>
+
+                    <h1>
+                        Disciplinas
+                    </h1>
+
+                    <p>
+                        Gerencie componentes curriculares,
+                        carga horária e vínculos acadêmicos.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="new-subject-button"
+                    id="newSubjectButton"
+                >
+
+                    <i
+                        class="fa-solid fa-plus"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Nova disciplina
+                    </span>
+
+                </button>
+
+
+                <button type="button" class="secondary-button" id="newLinkButton">Vincular disciplina à turma</button>
+            </header>
+
+
+            <!-- ==================================================
+                            CARDS
+            =================================================== -->
+
+            <section
+                class="subjects-summary"
+                aria-label="Resumo das disciplinas"
+            >
+
+
+                <!-- TOTAL -->
+
+                <article class="summary-card">
+
+                    <div class="summary-icon">
+
+                        <i
+                            class="fa-solid fa-book-open"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total de disciplinas
+                        </span>
+
+                        <strong id="totalSubjects">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ATIVAS -->
+
+                <article class="summary-card">
+
+                    <div class="summary-icon">
+
+                        <i
+                            class="fa-solid fa-circle-check"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Disciplinas ativas
+                        </span>
+
+                        <strong id="activeSubjects">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARGA HORÁRIA -->
+
+                <article class="summary-card">
+
+                    <div class="summary-icon">
+
+                        <i
+                            class="fa-solid fa-clock"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Carga horária total
+                        </span>
+
+                        <strong id="totalHours">
+                            0h
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VÍNCULOS -->
+
+                <article class="summary-card">
+
+                    <div class="summary-icon warning">
+
+                        <i
+                            class="fa-solid fa-link"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Vínculos com turmas
+                        </span>
+
+                        <strong id="linkedClasses">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- ==================================================
+                    LISTA DE DISCIPLINAS
+            =================================================== -->
+
+            <section
+                class="subjects-panel"
+                aria-labelledby="subjectsListTitle"
+            >
+
+
+                <div class="subjects-panel-header">
+
+
+                    <div>
+
+                        <h2 id="subjectsListTitle">
+                            Lista de disciplinas
+                        </h2>
+
+                        <p>
+                            Pesquise e gerencie os componentes curriculares.
+                        </p>
+
+                    </div>
+
+
+                    <!-- FILTROS -->
+
+                    <div class="subjects-actions">
+
+
+                        <!-- PESQUISA -->
+
+                        <div
+                            class="subjects-search"
+                            role="search"
+                        >
+
+                            <i
+                                class="fa-solid fa-magnifying-glass"
+                                aria-hidden="true"
+                            ></i>
+
+                            <input
+                                type="search"
+                                id="subjectSearch"
+                                placeholder="Pesquisar disciplina..."
+                                autocomplete="off"
+                                aria-label="Pesquisar disciplina"
+                            >
+
+                        </div>
+
+
+                        <!-- ÁREA -->
+
+                        <select
+                            id="areaFilter"
+                            aria-label="Filtrar por área de conhecimento"
+                        >
+
+                            <option value="">
+                                Todas as áreas
+                            </option>
+
+                            <option value="Linguagens">
+                                Linguagens
+                            </option>
+
+                            <option value="Matemática">
+                                Matemática
+                            </option>
+
+                            <option value="Ciências da Natureza">
+                                Ciências da Natureza
+                            </option>
+
+                            <option value="Ciências Humanas">
+                                Ciências Humanas
+                            </option>
+
+                            <option value="Artes">
+                                Artes
+                            </option>
+
+                            <option value="Tecnologia">
+                                Tecnologia
+                            </option>
+
+                        </select>
+
+
+                        <!-- STATUS -->
+
+                        <select
+                            id="statusFilter"
+                            aria-label="Filtrar por status"
+                        >
+
+                            <option value="">
+                                Todos os status
+                            </option>
+
+                            <option value="Ativa">
+                                Ativa
+                            </option>
+
+                            <option value="Inativa">
+                                Inativa
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ==================================================
+                                TABELA
+                =================================================== -->
+
+                <div class="subjects-table-wrapper">
+
+
+                    <table class="subjects-table">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th scope="col">
+                                    Disciplina
+                                </th>
+
+                                <th scope="col">
+                                    Código
+                                </th>
+
+                                <th scope="col">
+                                    Área
+                                </th>
+
+                                <th scope="col">
+                                    Professor
+                                </th>
+
+                                <th scope="col">
+                                    Turma
+                                </th>
+
+                                <th scope="col">
+                                    Carga horária
+                                </th>
+
+                                <th scope="col">
+                                    Status
+                                </th>
+
+                                <th scope="col">
+                                    Ações
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="subjectsTableBody">
+
+                        </tbody>
+
+
+                    </table>
+
+
+                    <!-- NENHUM RESULTADO -->
+
+                    <div
+                        class="subjects-empty"
+                        id="subjectsEmpty"
+                    >
+
+                        <i
+                            class="fa-solid fa-book"
+                            aria-hidden="true"
+                        ></i>
+
+                        <strong>
+                            Nenhuma disciplina encontrada
+                        </strong>
+
+                        <span>
+                            Tente alterar a pesquisa ou os filtros.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- ==================================================
+                MODAL CADASTRO / EDIÇÃO
+    =================================================== -->
+
+    <div
+        class="subject-modal"
+        id="subjectModal"
+        aria-hidden="true"
+    >
+
+
+        <div
+            class="subject-modal-overlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <div
+            class="subject-modal-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="subjectModalTitle"
+        >
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="subject-modal-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        Administração
+                    </span>
+
+                    <h2 id="subjectModalTitle">
+                        Nova disciplina
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="subject-modal-close"
+                    id="subjectModalClose"
+                    aria-label="Fechar cadastro de disciplina"
+                >
+
+                    <i
+                        class="fa-solid fa-xmark"
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+
+            <form
+                class="subject-form"
+                id="subjectForm"
+            >
+
+
+                <input type="hidden" id="subjectId">
+                <input type="hidden" id="subjectLinkId">
+                <div id="subjectIdentityFields">
+                    <div class="form-grid">
+                        <div class="form-group"><label for="subjectName">Nome da disciplina</label><input id="subjectName" maxlength="100" required autocomplete="off"></div>
+                        <div class="form-group"><label for="subjectCode">Código único</label><input id="subjectCode" maxlength="20" required autocomplete="off" placeholder="Ex: MAT01"></div>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group"><label for="subjectArea">Área de conhecimento</label><select id="subjectArea" required><option value="">Selecione</option><option>Linguagens</option><option>Matemática</option><option>Ciências da Natureza</option><option>Ciências Humanas</option><option>Artes</option><option>Tecnologia</option></select></div>
+                        <div class="form-group"><label for="subjectStatus">Status da disciplina</label><select id="subjectStatus"><option>Ativa</option><option>Inativa</option></select></div>
+                    </div>
+                    <p class="subject-form-note">O cadastro da disciplina é compartilhado entre suas turmas. Os vínculos são gerenciados separadamente.</p>
+                </div>
+                <div id="subjectLinkFields" hidden>
+                    <div class="form-group"><label for="linkSubject">Disciplina cadastrada</label><select id="linkSubject" required></select></div>
+                    <div class="form-grid">
+                        <div class="form-group"><label for="subjectTeacher">Professor</label><select id="subjectTeacher" required></select></div>
+                        <div class="form-group"><label for="subjectClass">Turma</label><select id="subjectClass" required></select></div>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group"><label for="subjectHours">Carga horária anual do vínculo</label><input type="number" id="subjectHours" min="1" max="1000" step="1" required></div>
+                        <div class="form-group"><label for="linkStatus">Status do vínculo</label><select id="linkStatus"><option>Ativa</option><option>Inativa</option></select></div>
+                    </div>
+                    <p class="subject-form-note" id="subjectLinkNotice"></p>
+                </div>
+
+                <!-- AÇÕES -->
+
+                <div class="subject-form-actions">
+
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="subjectCancelButton"
+                    >
+
+                        Cancelar
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+
+                        <i
+                            class="fa-solid fa-floppy-disk"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>Salvar disciplina</span>
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ==================================================
+                    MODAL VISUALIZAR
+    =================================================== -->
+
+    <div
+        class="subject-view-modal"
+        id="subjectViewModal"
+        aria-hidden="true"
+    >
+
+
+        <div
+            class="subject-view-overlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <div
+            class="subject-view-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="viewSubjectName"
+        >
+
+
+            <!-- CABEÇALHO -->
+
+            <div class="subject-view-header">
+
+
+                <div class="subject-view-avatar">
+
+                    <i
+                        class="fa-solid fa-book-open"
+                        aria-hidden="true"
+                    ></i>
+
+                </div>
+
+
+                <div>
+
+                    <span class="section-label">
+                        Informações da disciplina
+                    </span>
+
+                    <h2 id="viewSubjectName">
+                        Disciplina
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="subject-view-close"
+                    id="subjectViewClose"
+                    aria-label="Fechar informações da disciplina"
+                >
+
+                    <i
+                        class="fa-solid fa-xmark"
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- CONTEÚDO -->
+
+            <div class="subject-view-content">
+
+
+                <!-- CÓDIGO -->
+
+                <div class="subject-view-item">
+
+                    <span>
+                        Código
+                    </span>
+
+                    <strong id="viewSubjectCode">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- ÁREA -->
+
+                <div class="subject-view-item">
+
+                    <span>
+                        Área
+                    </span>
+
+                    <strong id="viewSubjectArea">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- PROFESSOR -->
+
+                <div class="subject-view-item">
+
+                    <span>
+                        Professor
+                    </span>
+
+                    <strong id="viewSubjectTeacher">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- TURMA -->
+
+                <div class="subject-view-item">
+
+                    <span>
+                        Turma
+                    </span>
+
+                    <strong id="viewSubjectClass">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- CARGA HORÁRIA -->
+
+                <div class="subject-view-item">
+
+                    <span>
+                        Carga horária
+                    </span>
+
+                    <strong id="viewSubjectHours">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="subject-view-item">
+
+                    <span>
+                        Status
+                    </span>
+
+                    <strong id="viewSubjectStatus">
+                        -
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ==================================================
+                        JAVASCRIPT
+    =================================================== -->
+
+    <script src="../js/core.js?v=20261007-1"></script>
+    <script src="../js/disciplinas.js?v=20261007-1"></script>
+
+
+</body>
+
+</html>

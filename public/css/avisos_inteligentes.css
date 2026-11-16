@@ -1,0 +1,16 @@
+/* Avisos discretos dentro do PrimeWay (sem notificações externas). */
+.pw-intelligent-notice{
+ position:fixed;right:20px;bottom:20px;z-index:1300;
+ width:min(380px,calc(100vw - 40px));padding:19px 48px 18px 20px;
+ background:#fff;color:#25364b;border:1px solid #cddae8;
+ border-left:4px solid #3d668a;border-radius:13px;
+ box-shadow:0 16px 42px rgba(16,30,47,.19);font:14px/1.45 Arial,sans-serif
+}
+.pw-intelligent-notice strong{display:block;font-size:15px;font-weight:700}
+.pw-intelligent-notice p{font-size:13px;color:#53677b;margin:7px 0 12px}
+.pw-intelligent-actions{display:flex;gap:13px;flex-wrap:wrap}
+.pw-intelligent-link{color:#244f7c;text-decoration:underline;font-size:13px;font-weight:700}
+.pw-intelligent-link:focus-visible,.pw-intelligent-close:focus-visible{outline:2px solid #215180;outline-offset:3px}
+.pw-intelligent-close{position:absolute;right:12px;top:10px;background:transparent;border:0;color:#53667c;font-size:21px;cursor:pointer;width:28px;height:28px}
+@media(max-width:550px){.pw-intelligent-notice{right:12px;bottom:12px;width:calc(100vw - 24px)}}
+@media(prefers-reduced-motion:reduce){.pw-intelligent-notice{transition:none}}

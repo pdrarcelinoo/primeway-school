@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat da Administração | PrimeWay School</title>
+    <link rel="icon" type="image/png" href="/img/logo.png?v=20261026">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/chat.css?v=20261007-1">
+    <link rel="stylesheet" href="../css/admin_chat_voice.css?v=20261110-audio1">
+    <link rel="stylesheet" href="../css/admin_chat_contacts.css?v=20261103-1">
+    <link rel="stylesheet" href="../css/admin_chat_readability.css?v=20261110-1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="pw-admin-chat">
+<div class="app-layout">
+<aside
+            class="sidebar"
+            aria-label="Menu principal"
+        >
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../img/logo.png"
+                    alt="PrimeWay School"
+                >
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav
+                class="sidebar-menu"
+                aria-label="Navegação principal"
+            >
+
+
+                <!-- INÍCIO -->
+
+                <a href="dashboard.html">
+
+                    <i
+                        class="fa-solid fa-house"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Início
+                    </span>
+
+                </a>
+
+
+                <!-- PROFESSOR -->
+
+                <a href="professores.html">
+
+                    <i
+                        class="fa-solid fa-chalkboard-user"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Professores
+                    </span>
+
+                </a>
+
+
+                <!-- ALUNOS -->
+
+                <a href="alunos.html">
+
+                    <i
+                        class="fa-solid fa-user-graduate"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Alunos
+                    </span>
+
+                </a>
+
+
+                <!-- RESPONSÁVEIS -->
+
+                <a href="responsaveis.html">
+
+                    <i
+                        class="fa-solid fa-people-roof"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Responsáveis
+                    </span>
+
+                </a>
+
+
+                <!-- TURMAS -->
+
+                <a href="turmas.html">
+
+                    <i
+                        class="fa-solid fa-users"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Turmas
+                    </span>
+
+                </a>
+
+
+                <!-- DISCIPLINAS -->
+
+                <a href="disciplinas.html">
+
+                    <i
+                        class="fa-solid fa-book-open"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Disciplinas
+                    </span>
+
+                </a>
+
+
+                <!-- CHAT -->
+
+                <a
+                    href="admin_chat.html"
+                    class="active"
+                    aria-current="page"
+                >
+
+                    <i
+                        class="fa-solid fa-comments"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Chat
+                    </span>
+
+                </a>
+
+
+                <!-- CALENDÁRIO -->
+
+                <a href="calendario.html">
+
+                    <i
+                        class="fa-solid fa-calendar-days"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Calendário
+                    </span>
+
+                </a>
+
+
+                <!-- NOTIFICAÇÕES -->
+
+                <a href="notificacoes.html">
+
+                    <i
+                        class="fa-solid fa-bell"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Notificações
+                    </span>
+
+                </a>
+
+
+                <!-- CONFIGURAÇÕES -->
+
+                <a href="configuracoes.html">
+
+                    <i
+                        class="fa-solid fa-gear"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Configurações
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- ==================================================
+                            SAIR
+            =================================================== -->
+
+            <div class="sidebar-bottom">
+
+                <button
+                    type="button"
+                    id="logoutButton"
+                >
+
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Sair
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </aside>
+<main class="chat-page">
+    <header class="chat-header">
+        <div class="chat-header-title">
+            <a href="dashboard.html" class="chat-back-button" aria-label="Voltar ao painel do Administrador">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </a>
+            <div>
+                <span class="section-label">Área do Administrador</span>
+                <h1>Chat da Administração</h1>
+                <p>Converse com professores, alunos, responsáveis, secretaria e outros administradores.</p>
+            </div>
+        </div>
+        <div class="chat-header-icon" aria-hidden="true"><i class="fa-solid fa-comments"></i></div>
+    </header>
+    <section class="chat-container" aria-label="Chat da Administração">
+        <aside class="chat-sidebar" aria-label="Conversas da Administração">
+            <div class="chat-sidebar-header">
+                <h2>Minhas conversas</h2>
+                <button type="button" class="new-chat-button" id="newChatButton" hidden aria-label="Iniciar nova conversa" title="Nova conversa">+</button>
+            </div>
+            <div class="chat-search">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <input type="search" placeholder="Buscar conversa" aria-label="Buscar minhas conversas" autocomplete="off">
+            </div>
+            <div class="chat-conversations" id="chatConversations">
+                <p>Carregando suas conversas...</p>
+            </div>
+        </aside>
+        <section class="chat-conversation" aria-labelledby="currentConversationTitle">
+            <div class="conversation-header">
+                <div class="conversation-person">
+                    <div class="conversation-avatar large" aria-hidden="true"><i class="fa-solid fa-comments"></i></div>
+                    <div>
+                        <h2 id="currentConversationTitle">Selecione uma conversa</h2>
+                        <span>Comunicação administrativa</span>
+                    </div>
+                </div>
+                <button type="button" id="conversationOptionsButton" hidden aria-label="Opções da conversa">⋯</button>
+            </div>
+            <div class="chat-messages" role="log" aria-live="polite" aria-relevant="additions" aria-label="Mensagens da conversa"></div>
+            <div class="chat-input-area">
+                <button type="button" class="chat-attachment" id="attachmentButton" aria-label="Anexar arquivo" aria-controls="attachmentInput">
+                    <i class="fa-solid fa-paperclip" aria-hidden="true"></i>
+                </button>
+                <input type="file" id="attachmentInput" aria-label="Selecionar arquivo para anexar" hidden>
+                <input type="text" placeholder="Digite sua mensagem..." autocomplete="off" aria-label="Digite sua mensagem" maxlength="5000">
+                <button type="button" class="chat-send" aria-label="Enviar mensagem">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                </button>
+            </div>
+        </section>
+    </section>
+
+    <dialog id="adminContactsDialog" class="admin-contacts-dialog" aria-labelledby="adminContactsTitle">
+        <div class="admin-contacts-head">
+            <div>
+                <span class="section-label">CHAT DA ADMINISTRAÇÃO</span>
+                <h2 id="adminContactsTitle">Nova conversa</h2>
+                <p>Encontre qualquer usuário ativo e inicie uma conversa individual.</p>
+            </div>
+            <button type="button" id="adminContactsClose" aria-label="Fechar contatos"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        </div>
+        <div class="admin-contacts-filters">
+            <label for="adminContactSearch">Pesquisar usuário</label>
+            <input type="search" id="adminContactSearch" placeholder="Nome ou e-mail..." autocomplete="off">
+            <label for="adminContactRole">Filtrar por perfil</label>
+            <select id="adminContactRole">
+                <option value="">Todos os perfis</option>
+                <option value="admin">Administradores</option>
+                <option value="professor">Professores</option>
+                <option value="aluno">Alunos</option>
+                <option value="responsavel">Responsáveis</option>
+                <option value="secretaria">Secretaria</option>
+            </select>
+        </div>
+        <div id="adminContactsList" class="admin-contacts-list" aria-live="polite"></div>
+        <div class="admin-contacts-pagination">
+            <button type="button" id="adminContactsPrevious">Anterior</button>
+            <span id="adminContactsPage">Página 1</span>
+            <button type="button" id="adminContactsNext">Próxima</button>
+        </div>
+    </dialog>
+</main>
+</div>
+<script src="../js/core.js?v=20261007-1"></script>
+<script src="../js/chat_attachments_shared.js?v=20261103-chatfiles1"></script>
+<script src="../js/chat_message_experience.js?v=20261005-3"></script>
+<script src="../js/chat_interaction_fixes.js?v=20261103-2"></script>
+<script src="../js/chat_live_updates.js?v=20261110-live1"></script>
+<script src="../js/chat.js?v=20261110-audio1"></script>
+</body>
+</html>

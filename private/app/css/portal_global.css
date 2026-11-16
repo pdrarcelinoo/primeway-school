@@ -1,0 +1,27 @@
+.pw-global-urgent{
+    position:relative;z-index:900;display:flex;align-items:flex-start;gap:14px;
+    margin:10px auto;padding:14px 16px;max-width:min(980px,calc(100% - 30px));
+    border:1px solid #bf8a2c;border-left:5px solid #bf8a2c;border-radius:12px;
+    background:#fff8e8;color:#583b16;box-shadow:0 9px 30px #101f361c;
+}
+.pw-global-urgent > i{font-size:19px;margin-top:2px}
+.pw-global-urgent-content{flex:1;min-width:0}
+.pw-global-urgent-content strong{font-size:14px;color:inherit}
+.pw-global-urgent-content p{margin:5px 0 0;line-height:1.5;font-size:13px;color:inherit;white-space:pre-wrap;overflow-wrap:anywhere}
+.pw-global-urgent-close{border:1px solid currentColor;border-radius:8px;min-height:34px;min-width:34px;background:transparent;color:inherit;cursor:pointer;font-size:21px}
+.pw-global-cookie-info{
+    position:fixed;z-index:2000;bottom:16px;left:16px;
+    width:min(400px,calc(100vw - 32px));background:#fff;color:#203350;
+    box-shadow:0 14px 44px #111f3850;border:1px solid #a2b0c7;border-radius:14px;padding:17px 18px;
+}
+.pw-global-cookie-info strong{color:inherit;font-size:15px}
+.pw-global-cookie-info p{margin:7px 0 12px;color:inherit;font-size:12.5px;line-height:1.6}
+.pw-global-cookie-actions{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.pw-global-cookie-link{font-size:12px;color:#254e9c;text-decoration:underline}
+.pw-global-cookie-ok{padding:9px 16px;border:0;border-radius:8px;background:#294c87;color:white;font-weight:700;cursor:pointer}
+html[data-primeway-theme="dark"] body .pw-global-urgent{background:#45331b!important;color:#ffe6b0!important;border-color:#d6a14b!important}
+html[data-primeway-theme="dark"] body .pw-global-urgent :is(p,strong,button,i){color:#ffe6b0!important}
+html[data-primeway-theme="dark"] body .pw-global-cookie-info{background:#182b44!important;color:#edf4ff!important;border-color:#557194!important}
+html[data-primeway-theme="dark"] body .pw-global-cookie-info :is(strong,p){color:#edf4ff!important}
+html[data-primeway-theme="dark"] body .pw-global-cookie-link{color:#b9d1ff!important}
+@media(max-width:650px){.pw-global-urgent{margin:8px auto;padding:12px;gap:9px}.pw-global-cookie-info{bottom:8px;left:8px;width:calc(100vw - 16px)}}

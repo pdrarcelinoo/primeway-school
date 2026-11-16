@@ -1,0 +1,30 @@
+.pw-chat-delivery-status {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 5px;
+    color: #8f99aa;
+    font-size: 7px;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.pw-chat-delivery-status i {
+    display: inline-block;
+    line-height: 1;
+}
+
+.pw-chat-delivery-status i + i {
+    margin-left: -3px;
+}
+
+.pw-chat-delivery-status[data-status="read"] {
+    color: #3f7fdc;
+}
+
+.pw-chat-delivery-status[data-status="sent"] i:first-child {
+    margin-right: 0;
+}
+
+/* Aviso de perda de conexão, mostrado somente no chat. */
+.pw-chat-network-status{position:fixed;inset:auto 18px 18px auto;max-width:min(400px,calc(100vw - 36px));padding:13px 17px;border-radius:12px;background:#fff6e9;border:1px solid #d8a669;color:#653c14;font-size:13px;line-height:1.5;z-index:1100;box-shadow:0 8px 28px rgba(20,28,39,.12)}
+.pw-chat-network-status[hidden]{display:none!important}

@@ -1,0 +1,12 @@
+
+/* Identidade do usuario e acesso ao perfil em todos os modulos. */
+.sidebar .primeway-side-profile{display:flex;align-items:center;gap:11px;min-height:58px;margin:12px 12px 4px;padding:10px;border:1px solid rgba(129,149,175,.2);border-radius:13px;background:rgba(255,255,255,.07);color:inherit;text-decoration:none;min-width:0}
+.sidebar .primeway-side-profile:hover,.sidebar .primeway-side-profile:focus-visible{background:rgba(168,181,201,.15);outline-offset:2px}
+.primeway-side-profile .primeway-avatar{width:35px;height:35px;flex:none;display:grid;place-items:center;border-radius:50%;background:#f4e7dc;color:#705342;font-size:12px;font-weight:700;overflow:hidden}
+.primeway-side-profile .primeway-avatar img{width:100%;height:100%;object-fit:cover}
+.primeway-side-profile .primeway-identity{display:flex;flex-direction:column;min-width:0;gap:2px}
+.primeway-side-profile .primeway-identity strong{font-size:12px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.primeway-side-profile .primeway-identity small{font-size:10px;opacity:.78}
+#dashboardUserName[role=link],#secretaryName[role=link],.secretary-profile-icon[role=link],.usuario>img[role=link]{cursor:pointer}
+#dashboardUserName[role=link]:hover,#secretaryName[role=link]:hover{text-decoration:underline}
+@media(max-width:760px){.sidebar .primeway-side-profile{justify-content:center;padding:9px 3px;margin:8px 4px}.sidebar .primeway-side-profile .primeway-identity{display:none}}

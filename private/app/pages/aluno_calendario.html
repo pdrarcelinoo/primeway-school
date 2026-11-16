@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Calendário do Aluno | PrimeWay School</title>
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/aluno_shared.css">
+<link rel="stylesheet" href="../css/calendario_portais.css?v=20261026-1">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body data-perfil="aluno"><div class="app-layout"><aside class="sidebar" aria-label="Menu do aluno">
+            <div class="sidebar-logo"><img src="../img/logo.png" alt="PrimeWay School"></div>
+            <nav class="sidebar-menu" aria-label="Navegação do aluno">
+                <a href="aluno_portal.html" class="active" aria-current="page">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i>
+                    <span>Meu painel</span>
+                </a>
+                <a href="aluno_atividades.html">
+                    <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                    <span>Atividades</span>
+                </a>
+                <a href="aluno_notas.html">
+                    <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                    <span>Notas</span>
+                </a>
+                <a href="aluno_frequencia.html">
+                    <i class="fa-solid fa-user-check" aria-hidden="true"></i>
+                    <span>Frequência</span>
+                </a>
+                <a href="aluno_calendario.html" class="active" aria-current="page"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span>Calendário</span></a><a href="aluno_notificacoes.html">
+                    <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                    <span>Notificações</span><span class="nav-badge" data-nav-badge="notifications" hidden>0</span>
+                </a>
+                <a href="aluno_chat.html">
+                    <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                    <span>Chat</span><span class="nav-badge" data-nav-badge="chat" hidden>0</span>
+                </a>
+                <a href="aluno_dados.html">
+                    <i class="fa-solid fa-address-card" aria-hidden="true"></i>
+                    <span>Meus dados</span>
+                </a>
+            </nav>
+            <div class="sidebar-bottom">
+                <button type="button" id="logoutButton"><i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i><span>Sair</span></button>
+            </div>
+        </aside>
+<main class="pwcal-page"><header class="pwcal-header"><span class="section-label">Área do Aluno</span><h1>Calendário do Aluno</h1><p>Acompanhe reuniões, provas e eventos da sua turma.</p></header>
+<section class="pwcal-panel" aria-label="Calendário mensal">
+<div class="pwcal-controls"><h2 id="calendarMonth">Calendário</h2><div class="pwcal-buttons">
+<button id="previousMonth" aria-label="Mês anterior" type="button"><i class="fa-solid fa-chevron-left"></i></button>
+<button id="todayMonth" type="button">Hoje</button>
+<button id="nextMonth" aria-label="Próximo mês" type="button"><i class="fa-solid fa-chevron-right"></i></button></div></div>
+<div class="pwcal-weekdays" id="weekdays"></div><div class="pwcal-grid" id="calendarGrid" aria-label="Selecione um dia para visualizar os eventos"></div>
+</section>
+<section class="pwcal-panel pwcal-agenda" aria-label="Lista de eventos"><h2>Eventos e compromissos</h2><p id="calendarStatus" class="pwcal-state" role="status">Carregando eventos...</p><div id="calendarAgenda" class="pwcal-list"></div></section>
+</main></div>
+<script src="../js/core.js?v=20261007-1"></script>
+<script src="../js/aluno_common.js?v=20261007-2"></script>
+<script src="../js/calendario_portais.js?v=20261026-1"></script>
+</body></html>

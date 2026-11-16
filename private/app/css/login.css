@@ -1,0 +1,735 @@
+/*====================================================
+                LOGIN - PRIMEWAY SCHOOL
+====================================================*/
+
+
+/*====================================================
+                    VARIÁVEIS
+====================================================*/
+
+:root {
+    --principal: #FFFFE4;
+    --secundaria: #1E3A8A;
+    --primaria: #D3AF37;
+
+    --texto: #1F2937;
+
+    --branco: #FFFFFF;
+    --cinza: #D1D5DB;
+
+    --sombra:
+        0
+        10px
+        35px
+        rgba(
+            0,
+            0,
+            0,
+            .08
+        );
+
+    --transicao: .3s ease;
+}
+
+
+/*====================================================
+                    RESET
+====================================================*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+
+    background: var(--principal);
+
+    color: var(--texto);
+
+    font-family: "Cinzel", serif;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+}
+
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline:
+        2px solid
+        var(--primaria);
+
+    outline-offset: 2px;
+}
+
+
+/*====================================================
+                    LAYOUT
+====================================================*/
+
+.container {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/*====================================================
+                LADO ESQUERDO
+====================================================*/
+
+.lado-esquerdo {
+    width: 50%;
+    min-width: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+
+    background: var(--secundaria);
+
+    color: var(--branco);
+
+    text-align: center;
+
+    animation:
+        aparecer
+        .8s
+        ease;
+}
+
+
+/*====================================================
+                    LOGO
+====================================================*/
+
+.logo {
+    width: 180px;
+    height: auto;
+
+    margin-bottom: 30px;
+
+    transition:
+        transform
+        .4s
+        ease;
+}
+
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+
+/*====================================================
+            TEXTO DO LADO ESQUERDO
+====================================================*/
+
+.lado-esquerdo h1 {
+    margin:
+        0
+        0
+        20px;
+
+    font-size: 42px;
+    font-weight: 600;
+}
+
+
+.lado-esquerdo p {
+    max-width: 500px;
+
+    margin: 0;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/*====================================================
+                LADO DIREITO
+====================================================*/
+
+.lado-direito {
+    width: 50%;
+    min-width: 0;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: var(--principal);
+
+    animation:
+        aparecer
+        1s
+        ease;
+}
+
+
+/*====================================================
+                    FORMULÁRIO
+====================================================*/
+
+#loginForm {
+    width: 100%;
+    max-width: 420px;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding: 40px;
+
+    border:
+        1px solid
+        rgba(
+            30,
+            58,
+            138,
+            .04
+        );
+
+    border-radius: 15px;
+
+    background: var(--branco);
+
+    box-shadow: var(--sombra);
+}
+
+
+#loginForm h2 {
+    margin:
+        0
+        0
+        10px;
+
+    color: var(--secundaria);
+
+    font-size: 24px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/*====================================================
+                    CAMPOS
+====================================================*/
+
+.campo {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.campo label {
+    color: var(--texto);
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.campo input {
+    width: 100%;
+    min-width: 0;
+    min-height: 50px;
+
+    padding:
+        0
+        15px;
+
+    border:
+        2px solid
+        var(--cinza);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: var(--branco);
+
+    color: var(--texto);
+
+    /* Cinzel fica apenas nos títulos: aqui cada letra mantém sua caixa real. */
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-variant: normal;
+    font-feature-settings: normal;
+    text-transform: none;
+    letter-spacing: normal;
+
+    transition:
+        border-color var(--transicao),
+        box-shadow var(--transicao),
+        background var(--transicao);
+}
+
+
+.campo input::placeholder {
+    color: #9CA3AF;
+}
+
+
+.campo input:focus {
+    border-color: var(--primaria);
+
+    background: var(--branco);
+
+    box-shadow:
+        0
+        0
+        0
+        3px
+        rgba(
+            211,
+            175,
+            55,
+            .14
+        );
+}
+
+
+/*====================================================
+                    SENHA
+====================================================*/
+
+.senha {
+    min-width: 0;
+
+    display: flex;
+}
+
+
+.senha input {
+    min-width: 0;
+
+    flex: 1;
+
+    border-radius:
+        10px
+        0
+        0
+        10px;
+}
+
+
+.senha button {
+    width: 60px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius:
+        0
+        10px
+        10px
+        0;
+
+    background: var(--primaria);
+
+    color: var(--branco);
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transicao),
+        color var(--transicao);
+}
+
+
+.senha button:hover {
+    background: #B79018;
+}
+
+
+.senha button:focus-visible {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Aviso discreto ao digitar senha com Caps Lock ligado. */
+.caps-lock-notice {
+    margin: 0;
+    color: #855c12;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.caps-lock-notice[hidden] {
+    display: none;
+}
+
+/*====================================================
+                ESQUECI A SENHA
+====================================================*/
+
+.esqueci {
+    align-self: flex-end;
+
+    color: var(--secundaria);
+
+    font-size: 14px;
+
+    text-align: right;
+
+    transition:
+        color
+        var(--transicao);
+}
+
+
+.esqueci:hover {
+    color: var(--primaria);
+}
+
+
+/*====================================================
+                BOTÃO DE LOGIN
+====================================================*/
+
+.btn-login {
+    width: 100%;
+    min-height: 52px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        0
+        24px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--primaria);
+
+    color: var(--branco);
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transicao),
+        transform var(--transicao),
+        box-shadow var(--transicao);
+}
+
+
+.btn-login:hover {
+    background: #B79018;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0
+        15px
+        25px
+        rgba(
+            0,
+            0,
+            0,
+            .15
+        );
+}
+
+
+.btn-login:active {
+    transform: scale(.97);
+}
+
+
+/*====================================================
+                    ANIMAÇÃO
+====================================================*/
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(
+                40px
+            );
+    }
+
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(
+                0
+            );
+    }
+
+}
+
+
+/*====================================================
+                    TABLET
+====================================================*/
+
+@media (max-width: 900px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+
+    .lado-esquerdo {
+        width: 100%;
+        min-height: 40vh;
+
+        padding: 40px;
+    }
+
+
+    .lado-direito {
+        width: 100%;
+        min-height: 60vh;
+
+        padding:
+            40px
+            25px;
+    }
+
+
+    .logo {
+        width: 140px;
+    }
+
+
+    .lado-esquerdo h1 {
+        font-size: 34px;
+    }
+
+}
+
+
+/*====================================================
+                    MOBILE
+====================================================*/
+
+@media (max-width: 600px) {
+
+    .lado-esquerdo {
+        min-height: auto;
+
+        padding:
+            35px
+            25px;
+    }
+
+
+    .lado-direito {
+        min-height: auto;
+
+        padding:
+            30px
+            20px
+            40px;
+    }
+
+
+    .logo {
+        width: 125px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .lado-esquerdo h1 {
+        margin-bottom: 14px;
+
+        font-size: 28px;
+    }
+
+
+    .lado-esquerdo p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    #loginForm {
+        padding:
+            30px
+            25px;
+    }
+
+
+    #loginForm h2 {
+        font-size: 22px;
+    }
+
+
+    .campo label {
+        font-size: 14px;
+    }
+
+
+    .btn-login {
+        font-size: 16px;
+    }
+
+}
+
+
+/*====================================================
+                CELULAR PEQUENO
+====================================================*/
+
+@media (max-width: 360px) {
+
+    .lado-esquerdo {
+        padding:
+            28px
+            18px;
+    }
+
+
+    .lado-direito {
+        padding:
+            24px
+            12px
+            32px;
+    }
+
+
+    .logo {
+        width: 110px;
+    }
+
+
+    .lado-esquerdo h1 {
+        font-size: 24px;
+    }
+
+
+    .lado-esquerdo p {
+        font-size: 14px;
+    }
+
+
+    #loginForm {
+        gap: 16px;
+
+        padding:
+            25px
+            18px;
+    }
+
+
+    .senha button {
+        width: 52px;
+    }
+
+}
+
+
+/*====================================================
+            MOVIMENTO REDUZIDO
+====================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    .lado-esquerdo,
+    .lado-direito {
+        animation: none;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}

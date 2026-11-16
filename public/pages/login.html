@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" type="image/png" href="/img/logo.png?v=20261026">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | PrimeWay School</title>
+
+
+    <!-- ==================================================
+                        CSS
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/login.css?v=20261109-case1"
+    >
+
+
+    <link rel="stylesheet" href="../css/tipografia_global.css?v=20261110-1">
+
+    <!-- ==================================================
+                    GOOGLE FONTS - CINZEL
+    =================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==================================================
+                    FONT AWESOME
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="pw-login-typography">
+
+
+    <main class="container">
+
+
+        <!-- ==================================================
+                    LADO ESQUERDO
+        =================================================== -->
+
+        <section
+            class="lado-esquerdo"
+            aria-labelledby="schoolTitle"
+        >
+
+
+            <img
+                src="../img/logo.png"
+                class="logo"
+                alt="PrimeWay School"
+            >
+
+
+            <h1 id="schoolTitle">
+                PrimeWay School
+            </h1>
+
+
+            <p>
+                Bem-vindo!
+                <br>
+                Faça login para acessar o sistema acadêmico.
+            </p>
+
+
+        </section>
+
+
+        <!-- ==================================================
+                    LADO DIREITO
+        =================================================== -->
+
+        <section
+            class="lado-direito"
+            aria-labelledby="loginTitle"
+        >
+
+
+            <form
+                id="loginForm"
+                autocomplete="on"
+            >
+
+
+                <h2 id="loginTitle">
+                    Entrar
+                </h2>
+
+
+                <!-- ==================================================
+                                E-MAIL
+                =================================================== -->
+
+                <div class="campo">
+
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        autocomplete="username"
+                        inputmode="email"
+                        autocapitalize="none"
+                        spellcheck="false"
+                        required
+                    >
+
+
+                </div>
+
+
+                <!-- ==================================================
+                                SENHA
+                =================================================== -->
+
+                <div class="campo">
+
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+
+                    <div class="senha">
+
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            id="mostrarSenha"
+                            aria-label="Mostrar senha"
+                        >
+
+                            <i
+                                class="fa-solid fa-eye"
+                                aria-hidden="true"
+                            ></i>
+
+                        </button>
+
+
+                    </div>
+
+                    <p id="capsLockNotice" class="caps-lock-notice" role="status" aria-live="polite" hidden>Caps Lock ativado: confira as letras maiúsculas na senha.</p>
+
+                </div>
+
+
+                <!-- ==================================================
+                            ESQUECI A SENHA
+                =================================================== -->
+
+                <a
+                    href="#"
+                    class="esqueci"
+                    id="esqueciSenha"
+                >
+                    Esqueci minha senha
+                </a>
+
+
+                <!-- ==================================================
+                                LOGIN
+                =================================================== -->
+
+                <button
+                    type="submit"
+                    class="btn-login"
+                >
+                    Entrar
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==================================================
+                        JAVASCRIPT
+    =================================================== -->
+
+    <script src="../js/core.js?v=20261007-1"></script>
+    <script src="../js/login.js?v=20261109-case1"></script>
+
+
+</body>
+
+</html>

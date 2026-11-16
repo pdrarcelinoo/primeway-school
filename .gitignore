@@ -1,0 +1,40 @@
+# Dados de execução e segredos locais
+.env
+.env.*
+!*.example
+private/app/config/database.local.php
+private/app/config/database.migration.local.php
+private/app/config/saida_segura.local.php
+**/storage/
+**/uploads/
+**/sessions/
+**/tmp/
+**/cache/
+*.log
+*.dump
+*.sql.gz
+*.sql.zip
+*.bak
+*~
+.DS_Store
+Thumbs.db
+
+# Dados e backups de execução
+backups/
+backup/
+private/app/scripts/
+private/app/tools/
+
+# Artefatos de dev e ambientes locais
+.vscode/
+.idea/
+.pytest_cache/
+__pycache__/
+.venv/
+node_modules/
+.git/
+
+# Relatorios internos de revisao
+RELATORIO_REVISAO.md
+ARQUIVOS_EXCLUIDOS.md
+LEIA_ANTES_DE_PUBLICAR.md

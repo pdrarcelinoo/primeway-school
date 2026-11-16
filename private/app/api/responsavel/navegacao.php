@@ -1,0 +1,127 @@
+<?php
+
+declare(strict_types=1);
+require_once __DIR__.'/../notificacoes/_notificacoes.php';
+
+require_once __DIR__ . '/../_bootstrap.php';
+
+primewayExigirMetodo('GET');
+
+$usuario =
+    primewayExigirPerfis([
+        'responsavel'
+    ]);
+
+try {
+
+    $pdo =
+        primewayPdo();
+
+    $usuarioId =
+        (int) $usuario['id'];
+
+    $unreadNotifications=primewayNotificationUnread($pdo,$usuario);
+
+    $stmtMensagens =
+        $pdo->prepare(
+            "
+                SELECT COUNT(DISTINCT m.id)
+
+                FROM conversa_participantes cp
+
+                INNER JOIN conversas c
+                    ON c.id = cp.conversa_id
+                   AND c.ativo = 1
+
+                INNER JOIN mensagens m
+                    ON m.conversa_id = c.id
+                   AND m.excluida_em IS NULL
+                   AND m.remetente_usuario_id <> :usuario_id_mensagem
+
+                LEFT JOIN mensagem_leituras ml
+                    ON ml.mensagem_id = m.id
+                   AND ml.usuario_id = :usuario_id_leitura
+
+                WHERE cp.usuario_id = :usuario_id_participante
+                  AND cp.ativo = 1
+                  AND cp.saiu_em IS NULL
+                  AND cp.arquivada_em IS NULL
+                  AND ml.id IS NULL
+            "
+        );
+
+    $stmtMensagens->execute([
+        ':usuario_id_mensagem' =>
+            $usuarioId,
+
+        ':usuario_id_leitura' =>
+            $usuarioId,
+
+        ':usuario_id_participante' =>
+            $usuarioId
+    ]);
+
+    $activePickup = 0;
+
+    try {
+        $stmtPickup =
+            $pdo->prepare(
+                "
+                    SELECT COUNT(*)
+
+                    FROM solicitacoes_saida_segura ss
+
+                    INNER JOIN responsaveis r
+                        ON r.id = ss.responsavel_id
+
+                    INNER JOIN usuarios u
+                        ON u.pessoa_id = r.pessoa_id
+
+                    WHERE u.id = :usuario_id
+                      AND ss.status IN (
+                            'Aguardando',
+                            'No raio',
+                            'Preparando'
+                      )
+                "
+            );
+
+        $stmtPickup->execute([
+            ':usuario_id' =>
+                $usuarioId
+        ]);
+
+        $activePickup =
+            (int) $stmtPickup->fetchColumn();
+
+    } catch (Throwable $ignorado) {
+        $activePickup = 0;
+    }
+
+    primewayResponderJson([
+        'success' => true,
+        'viewerId' => $usuarioId,
+        'unreadNotifications' =>
+            $unreadNotifications,
+        'unreadMessages' =>
+            (int) $stmtMensagens->fetchColumn(),
+        'activePickup' =>
+            $activePickup
+    ]);
+
+} catch (Throwable $erro) {
+
+    error_log(
+        'PrimeWay Responsável Navegação GET: ' .
+        $erro->getMessage()
+    );
+
+    primewayResponderJson(
+        [
+            'success' => false,
+            'message' =>
+                'Não foi possível carregar os contadores da navegação.'
+        ],
+        500
+    );
+}

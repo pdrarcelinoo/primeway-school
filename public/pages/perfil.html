@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meu Perfil | PrimeWay School</title>
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/perfil.css?v=20261027-1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<div class="app-layout">
+<aside class="sidebar" aria-label="Meu perfil e navegação">
+  <div class="sidebar-logo"><img src="../img/logo.png" alt="PrimeWay School"></div>
+  <nav class="sidebar-menu" aria-label="Navegação do perfil">
+    <a href="perfil.html" class="active" aria-current="page"><i class="fa-solid fa-user-pen" aria-hidden="true"></i><span>Perfil</span></a>
+    <a href="chat.html"><i class="fa-solid fa-comments" aria-hidden="true"></i><span>Chat</span></a>
+  </nav>
+  <div class="sidebar-bottom"><button type="button" id="logoutButton"><i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i><span>Sair</span></button></div>
+</aside>
+<main class="perfil-page">
+  <header class="perfil-top">
+    <a id="profileHome" class="perfil-back" href="chat.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Voltar ao meu painel</a>
+    <span class="section-label">MINHA CONTA</span>
+    <h1>Meu Perfil</h1>
+    <p>Personalize como seu nome e sua foto aparecem no PrimeWay. Essas alterações pertencem somente à sua conta.</p>
+  </header>
+  <div id="profileStatus" class="perfil-status" role="status" aria-live="polite">Carregando seus dados…</div>
+  <div class="perfil-grid">
+    <section class="perfil-card perfil-photo-card" aria-labelledby="photoTitle">
+      <div class="perfil-image" id="profileImageFrame" aria-label="Sua foto de perfil">
+        <span id="profileInitials" aria-hidden="true">PW</span>
+        <img id="profilePhoto" alt="Minha foto de perfil" hidden>
+      </div>
+      <h2 id="profileDisplayName">Seu nome</h2>
+      <span class="perfil-role" id="profileRole">Perfil</span>
+      <h3 id="photoTitle">Foto do perfil</h3>
+      <p>Escolha uma foto JPG ou PNG com até 2 MB e 2000 × 2000 pixels.</p>
+      <form id="photoForm">
+        <label class="perfil-upload" for="photoInput"><i class="fa-solid fa-camera" aria-hidden="true"></i> Escolher foto</label>
+        <input id="photoInput" name="photo" type="file" accept="image/png,image/jpeg" hidden>
+        <p id="photoSelection" class="perfil-file-name">Nenhuma foto selecionada.</p>
+        <button class="perfil-button" type="submit" id="savePhoto" disabled>Salvar foto</button>
+      </form>
+      <button type="button" id="removePhoto" class="perfil-text-button" hidden>Remover minha foto</button>
+    </section>
+    <section class="perfil-card perfil-form-card" aria-labelledby="detailsTitle">
+      <div class="perfil-card-heading"><div><span class="section-label">DADOS PESSOAIS</span><h2 id="detailsTitle">Informações do perfil</h2></div><i class="fa-regular fa-id-card" aria-hidden="true"></i></div>
+      <form id="profileForm">
+        <label for="profileName">Nome completo</label>
+        <input id="profileName" name="name" type="text" autocomplete="name" minlength="2" maxlength="120" required placeholder="Seu nome completo">
+        <label for="profilePhone">Número de telefone</label>
+        <input id="profilePhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="(11) 99999-9999">
+        <label for="profileContactEmail">E-mail de contato</label>
+        <input id="profileContactEmail" name="contactEmail" type="email" autocomplete="email" maxlength="190" placeholder="Seu e-mail para contato">
+        <div class="perfil-divider"></div>
+        <label for="profileLogin">E-mail utilizado para entrar</label>
+        <input id="profileLogin" type="email" readonly aria-describedby="loginHint">
+        <p id="loginHint" class="perfil-help">O e-mail de login e o tipo de conta são protegidos e não podem ser alterados nesta página.</p>
+        <label for="profileType">Tipo de conta</label>
+        <input id="profileType" type="text" readonly>
+        <div class="perfil-form-actions"><button class="perfil-button" id="saveProfile" type="submit">Salvar alterações</button></div>
+      </form>
+    </section>
+  </div>
+</main>
+</div>
+<script src="../js/core.js?v=20261027-perfil"></script>
+<script src="../js/perfil.js?v=20261110-nav1"></script>
+</body>
+</html>

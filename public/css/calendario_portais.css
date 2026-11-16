@@ -1,0 +1,20 @@
+.pwcal-page{width:100%;min-width:0;min-height:100vh;padding:32px;background:var(--principal,#fafbe5);color:var(--secundaria,#233e83)}
+.pwcal-header{margin-bottom:20px}.pwcal-header .section-label{color:#ad8d34;text-transform:uppercase;font:700 10px Arial,sans-serif;letter-spacing:.1em}
+.pwcal-header h1{margin:8px 0 5px;font-size:28px;font-family:Cinzel,serif}.pwcal-header p{font:12px/1.5 Arial,sans-serif;color:#66718a;margin:0}
+.pwcal-panel{background:#fff;border:1px solid #ebedf4;border-radius:16px;box-shadow:0 3px 12px #172c6010;margin:16px 0;overflow:hidden}
+.pwcal-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:19px 21px;border-bottom:1px solid #eceef4}
+.pwcal-controls h2{margin:0;font:600 20px Cinzel,serif;color:#233e83;text-transform:capitalize}
+.pwcal-buttons{display:flex;gap:8px}.pwcal-buttons button{border:1px solid #dfe5f0;background:#fff;border-radius:9px;padding:9px 13px;cursor:pointer;color:#233e83;font:600 12px Arial,sans-serif}
+.pwcal-buttons button:hover,.pwcal-buttons button:focus-visible{border-color:#c6a04b;outline:2px solid #ebd59a}
+.pwcal-weekdays,.pwcal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.pwcal-weekdays{background:#f5f7fc}.pwcal-weekdays span{padding:13px 2px;text-align:center;color:#63718c;font:700 11px Arial,sans-serif}
+.pwcal-grid{padding:12px;gap:6px}
+.pwcal-day{display:flex;flex-direction:column;align-items:start;justify-content:space-between;min-height:83px;padding:10px;border:1px solid #e8ecf5;border-radius:9px;background:white;cursor:pointer;text-align:left}
+.pwcal-day.blank{border:0;cursor:default}.pwcal-day.today{border-color:#b88b29;background:#fff9e8}
+.pwcal-day.has-event{background:#eff4ff}.pwcal-day.selected{outline:2px solid #233e83}
+.pwcal-number{font:700 14px Arial,sans-serif;color:#233e83}.pwcal-count{font:10px Arial,sans-serif;color:#4763a5}
+.pwcal-agenda{padding:20px}.pwcal-agenda h2{font:600 17px Cinzel,serif;color:#233e83;margin:0 0 7px}.pwcal-state{font:11px Arial,sans-serif;color:#66718a;margin-bottom:14px}
+.pwcal-list{display:grid;gap:10px}.pwcal-item{border:1px solid #e6eaf3;border-left:4px solid #d1a646;border-radius:11px;padding:14px}
+.pwcal-item strong{display:block;margin:6px 0;color:#233e83;font:600 14px Cinzel,serif}.pwcal-item p{font:11px/1.6 Arial,sans-serif;color:#526078;margin:3px 0}.pwcal-item .pwcal-desc{color:#39465d}
+.pwcal-type{display:inline-flex;padding:4px 8px;border-radius:999px;background:#fff6d7;color:#7c601e;font:700 10px Arial,sans-serif}.pwcal-empty{padding:24px;font:12px Arial,sans-serif;color:#718099}
+@media(max-width:800px){.pwcal-page{padding:18px}.pwcal-controls{padding:13px}.pwcal-controls h2{font-size:16px}.pwcal-grid{gap:3px;padding:6px}.pwcal-day{padding:5px;min-height:63px}.pwcal-count{font-size:8px}}

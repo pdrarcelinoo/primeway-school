@@ -1,0 +1,33 @@
+/* Gravador unificado no Chat Admin: mantém o mesmo componente do restante da escola. */
+.chat-input-area{
+    grid-template-columns:40px 40px minmax(0,1fr) 40px;
+    gap:9px;
+}
+.chat-input-area .chat-attachment{grid-column:1;grid-row:1}
+.chat-input-area .pw-chat-audio-button{
+    grid-column:2;grid-row:1;
+    width:40px!important;min-width:40px;height:40px;
+    flex:0 0 40px;
+}
+.chat-input-area .pw-chat-recording-status{
+    grid-column:1/-1;grid-row:2;min-width:0;justify-content:flex-start;
+}
+.chat-input-area input[type="text"]{grid-column:3;grid-row:1}
+.chat-input-area .chat-send{grid-column:4;grid-row:1}
+.chat-input-area :is(.pw-chat-audio-button,.chat-attachment,.chat-send):focus-visible{
+    outline:2px solid #d2ac55;outline-offset:2px;
+}
+html[data-primeway-theme="dark"] body .chat-input-area .pw-chat-audio-button{
+    background:#223852!important;color:#eaf2ff!important;border-color:#547092!important;
+}
+html[data-primeway-theme="dark"] body .chat-input-area .pw-chat-audio-button.is-recording{
+    background:#58303a!important;color:#ffdce2!important;border-color:#915468!important;
+}
+@media(max-width:600px){
+    .chat-input-area{grid-template-columns:36px 36px minmax(0,1fr) 36px;gap:6px}
+    .chat-input-area .pw-chat-audio-button{width:36px!important;min-width:36px;height:36px;flex-basis:36px}
+}
+@media(max-width:360px){
+    .chat-input-area{grid-template-columns:34px 34px minmax(0,1fr) 34px;gap:5px}
+    .chat-input-area .pw-chat-audio-button{width:34px!important;min-width:34px;height:34px;flex-basis:34px}
+}

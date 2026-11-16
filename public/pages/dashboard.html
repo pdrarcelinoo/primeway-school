@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Início | PrimeWay School</title>
+
+
+    <!-- ==================================================
+                        ESTILOS
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css?v=20261103-admin1"
+    >
+
+
+    <!-- ==================================================
+                        GOOGLE FONTS
+    =================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==================================================
+                        FONT AWESOME
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="dashboard">
+
+
+        <!-- ==================================================
+                            SIDEBAR
+        =================================================== -->
+
+        <aside
+            class="sidebar"
+            aria-label="Menu principal"
+        >
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="../img/logo.png"
+                    alt="PrimeWay School"
+                >
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav
+                class="sidebar-menu"
+                aria-label="Navegação principal"
+            >
+
+
+                <a
+                    href="dashboard.html"
+                    class="active"
+                    aria-current="page"
+                >
+
+                    <i
+                        class="fa-solid fa-house"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Início
+                    </span>
+
+                </a>
+
+
+                <a href="professores.html">
+
+                    <i
+                        class="fa-solid fa-chalkboard-user"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Professores
+                    </span>
+
+                </a>
+
+
+                <a href="alunos.html">
+
+                    <i
+                        class="fa-solid fa-user-graduate"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Alunos
+                    </span>
+
+                </a>
+
+
+                <a href="responsaveis.html">
+
+                    <i
+                        class="fa-solid fa-people-roof"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Responsáveis
+                    </span>
+
+                </a>
+
+
+                <a href="turmas.html">
+
+                    <i
+                        class="fa-solid fa-users"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Turmas
+                    </span>
+
+                </a>
+
+
+                <a href="disciplinas.html">
+
+                    <i
+                        class="fa-solid fa-book-open"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Disciplinas
+                    </span>
+
+                </a>
+
+
+                <a href="admin_chat.html">
+
+                    <i
+                        class="fa-solid fa-comments"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Chat
+                    </span>
+
+                </a>
+
+
+                <a href="calendario.html">
+
+                    <i
+                        class="fa-solid fa-calendar-days"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Calendário
+                    </span>
+
+                </a>
+
+
+                <a href="notificacoes.html">
+
+                    <i
+                        class="fa-solid fa-bell"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Notificações
+                    </span>
+
+                </a>
+
+
+                <a href="configuracoes.html">
+
+                    <i
+                        class="fa-solid fa-gear"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Configurações
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SAIR -->
+
+            <div class="sidebar-bottom">
+
+                <button
+                    type="button"
+                    id="logoutButton"
+                >
+
+                    <i
+                        class="fa-solid fa-right-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Sair
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ==================================================
+                            CONTEÚDO
+        =================================================== -->
+
+        <main class="conteudo">
+
+
+            <!-- ==================================================
+                            TOPO
+            =================================================== -->
+
+
+
+
+            <!-- ==================================================
+                        ÁREA PRINCIPAL
+            =================================================== -->
+
+            <section
+                class="pagina"
+                aria-labelledby="dashboardTitle"
+            >
+
+
+                <!-- APRESENTAÇÃO DA ÁREA ADMINISTRATIVA -->
+                <header class="topo admin-dashboard-header">
+                    <div class="admin-dashboard-intro">
+                        <span class="section-label">Área exclusiva da administração</span>
+                        <h1 id="dashboardTitle">Olá, Administrador!</h1>
+                        <p>Gerencie pessoas, turmas, indicadores e a comunicação escolar em um só lugar.</p>
+                    </div>
+                    <div class="admin-dashboard-meta">
+                        <div class="admin-dashboard-date">
+                            <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                            <time id="adminDashboardDate">Data de hoje</time>
+                        </div>
+                        <div class="usuario">
+
+
+                    <button
+                        class="btn-notificacao"
+                        type="button"
+                        onclick="window.location.href='notificacoes.html'"
+                        title="Notificações"
+                        aria-label="Abrir notificações"
+                    >
+
+                        <i
+                            class="fa-solid fa-bell"
+                            aria-hidden="true"
+                        ></i>
+
+                    </button>
+
+
+                    <img
+                        src="../img/avatar.png"
+                        alt="Avatar do usuário"
+                    >
+
+
+                    <div>
+
+                        <h3 id="dashboardUserName">
+                            Administrador
+                        </h3>
+
+                        <p id="dashboardUserRole">
+                            Administrador
+                        </p>
+
+                    </div>
+
+
+                </div>
+                    </div>
+                </header>
+
+                <div class="dashboard-home">
+
+
+                    <!-- ==================================================
+                                CARDS DO INÍCIO
+                    =================================================== -->
+
+                    <section
+                        class="dashboard-cards"
+                        aria-label="Resumo geral"
+                    >
+
+
+                        <!-- TOTAL DE ALUNOS -->
+
+                        <div class="dashboard-card">
+
+
+                            <div class="dashboard-card-icon alunos">
+
+                                <i
+                                    class="fa-solid fa-user-graduate"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </div>
+
+
+                            <div class="dashboard-card-text">
+
+                                <span>
+                                    Total de Alunos
+                                </span>
+
+                                <h2 id="dashboardStudents">
+                                    0
+                                </h2>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- PROFESSORES -->
+
+                        <div class="dashboard-card">
+
+
+                            <div class="dashboard-card-icon professores">
+
+                                <i
+                                    class="fa-solid fa-chalkboard-user"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </div>
+
+
+                            <div class="dashboard-card-text">
+
+                                <span>
+                                    Professores
+                                </span>
+
+                                <h2 id="dashboardProfessors">
+                                    0
+                                </h2>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- TURMAS -->
+
+                        <div class="dashboard-card">
+
+
+                            <div class="dashboard-card-icon turmas">
+
+                                <i
+                                    class="fa-solid fa-school"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </div>
+
+
+                            <div class="dashboard-card-text">
+
+                                <span>
+                                    Turmas
+                                </span>
+
+                                <h2 id="dashboardClasses">
+                                    0
+                                </h2>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- MÉDIA GERAL -->
+
+                        <div class="dashboard-card">
+
+
+                            <div class="dashboard-card-icon media">
+
+                                <i
+                                    class="fa-solid fa-chart-line"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </div>
+
+
+                            <div class="dashboard-card-text">
+
+                                <span>
+                                    Média Geral
+                                </span>
+
+                                <h2 id="dashboardAverage">
+                                    —
+                                </h2>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                    <nav class="admin-quick-grid" aria-label="Acessos rápidos da administração">
+                        <a class="admin-quick-card" href="professores.html">
+                            <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>
+                            <span class="admin-quick-copy"><strong>Professores</strong><small>Consulte o corpo docente</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="admin-quick-card" href="alunos.html">
+                            <i class="fa-solid fa-user-graduate" aria-hidden="true"></i>
+                            <span class="admin-quick-copy"><strong>Alunos</strong><small>Acompanhe os estudantes</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="admin-quick-card" href="turmas.html">
+                            <i class="fa-solid fa-users" aria-hidden="true"></i>
+                            <span class="admin-quick-copy"><strong>Turmas</strong><small>Organize as turmas escolares</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="admin-quick-card" href="notificacoes.html">
+                            <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                            <span class="admin-quick-copy"><strong>Notificações</strong><small>Gerencie os comunicados</small></span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </nav>
+
+                    <!-- ==================================================
+                            ATIVIDADES RECENTES
+                    =================================================== -->
+
+                    <section
+                        class="recent-section"
+                        aria-labelledby="recentActivitiesTitle"
+                    >
+
+
+                        <div class="recent-header">
+
+
+                            <div>
+
+                                <h2 id="recentActivitiesTitle">
+                                    Atividades Recentes
+                                </h2>
+
+                                <p>
+                                    Acompanhe as últimas atualizações do sistema.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                class="recent-filter"
+                                type="button"
+                            >
+
+                                <i
+                                    class="fa-solid fa-filter"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Filtrar
+
+                            </button>
+
+
+                        </div>
+
+
+                        <div class="recent-list" id="dashboardRecentList">
+
+
+                            <!-- ATIVIDADE 1 -->
+
+                            <div class="recent-item">
+
+
+                                <div class="recent-icon nota">
+
+                                    <i
+                                        class="fa-solid fa-file-pen"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </div>
+
+
+                                <div class="recent-info">
+
+                                    <h3>
+                                        Nova nota lançada
+                                    </h3>
+
+                                    <p>
+                                        Professor João lançou uma nova nota
+                                        para a turma 2º Ano A.
+                                    </p>
+
+                                    <span>
+
+                                        <i
+                                            class="fa-regular fa-clock"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                        Há 10 minutos
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="recent-status sucesso">
+                                    Concluído
+                                </span>
+
+
+                            </div>
+
+
+                            <!-- ATIVIDADE 2 -->
+
+                            <div class="recent-item">
+
+
+                                <div class="recent-icon atividade">
+
+                                    <i
+                                        class="fa-solid fa-book-open"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </div>
+
+
+                                <div class="recent-info">
+
+                                    <h3>
+                                        Nova atividade publicada
+                                    </h3>
+
+                                    <p>
+                                        Foi publicada uma nova atividade
+                                        de Matemática.
+                                    </p>
+
+                                    <span>
+
+                                        <i
+                                            class="fa-regular fa-clock"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                        Há 35 minutos
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="recent-status novo">
+                                    Nova
+                                </span>
+
+
+                            </div>
+
+
+                            <!-- ATIVIDADE 3 -->
+
+                            <div class="recent-item">
+
+
+                                <div class="recent-icon frequencia">
+
+                                    <i
+                                        class="fa-solid fa-user-check"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </div>
+
+
+                                <div class="recent-info">
+
+                                    <h3>
+                                        Frequência registrada
+                                    </h3>
+
+                                    <p>
+                                        A frequência da turma 1º Ano B
+                                        foi atualizada.
+                                    </p>
+
+                                    <span>
+
+                                        <i
+                                            class="fa-regular fa-clock"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                        Há 1 hora
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="recent-status sucesso">
+                                    Atualizado
+                                </span>
+
+
+                            </div>
+
+
+                            <!-- ATIVIDADE 4 -->
+
+                            <div class="recent-item">
+
+
+                                <div class="recent-icon aviso">
+
+                                    <i
+                                        class="fa-solid fa-bullhorn"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </div>
+
+
+                                <div class="recent-info">
+
+                                    <h3>
+                                        Novo aviso da escola
+                                    </h3>
+
+                                    <p>
+                                        A secretaria publicou um novo
+                                        comunicado.
+                                    </p>
+
+                                    <span>
+
+                                        <i
+                                            class="fa-regular fa-clock"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                        Há 2 horas
+
+                                    </span>
+
+                                </div>
+
+
+                                <span class="recent-status aviso-status">
+                                    Aviso
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                    <!-- ==================================================
+                            CALENDÁRIO E AVISOS
+                    =================================================== -->
+
+                    <section
+                        class="dashboard-two-columns"
+                        aria-label="Calendário e avisos"
+                    >
+
+
+                        <!-- ==================================================
+                                    CALENDÁRIO
+                        =================================================== -->
+
+                        <div class="dashboard-panel">
+
+
+                            <div class="panel-header">
+
+
+                                <div>
+
+                                    <h2>
+                                        Calendário
+                                    </h2>
+
+                                    <p>
+                                        Próximas atividades
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    class="panel-action"
+                                    type="button"
+                                    onclick="window.location.href='calendario.html'"
+                                    title="Abrir calendário"
+                                    aria-label="Abrir calendário"
+                                >
+
+                                    <i
+                                        class="fa-solid fa-calendar-days"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </button>
+
+
+                            </div>
+
+
+                            <div class="calendar-list" id="dashboardCalendarList">
+
+
+                                <!-- ATIVIDADE 1 -->
+
+                                <div class="calendar-item">
+
+
+                                    <div class="calendar-date">
+
+                                        <span class="calendar-day">
+                                            12
+                                        </span>
+
+                                        <span class="calendar-month">
+                                            AGO
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="calendar-info">
+
+                                        <h3>
+                                            Prova de Matemática
+                                        </h3>
+
+                                        <p>
+
+                                            <i
+                                                class="fa-regular fa-clock"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            08:00 - 09:30
+
+                                        </p>
+
+                                        <span>
+                                            2º Ano A
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <!-- ATIVIDADE 2 -->
+
+                                <div class="calendar-item">
+
+
+                                    <div class="calendar-date">
+
+                                        <span class="calendar-day">
+                                            15
+                                        </span>
+
+                                        <span class="calendar-month">
+                                            AGO
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="calendar-info">
+
+                                        <h3>
+                                            Entrega de atividade
+                                        </h3>
+
+                                        <p>
+
+                                            <i
+                                                class="fa-regular fa-clock"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            Até 23:59
+
+                                        </p>
+
+                                        <span>
+                                            3º Ano B
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <!-- ATIVIDADE 3 -->
+
+                                <div class="calendar-item">
+
+
+                                    <div class="calendar-date">
+
+                                        <span class="calendar-day">
+                                            18
+                                        </span>
+
+                                        <span class="calendar-month">
+                                            AGO
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="calendar-info">
+
+                                        <h3>
+                                            Trabalho de História
+                                        </h3>
+
+                                        <p>
+
+                                            <i
+                                                class="fa-regular fa-clock"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            10:00 - 11:00
+
+                                        </p>
+
+                                        <span>
+                                            1º Ano A
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <!-- ATIVIDADE 4 -->
+
+                                <div class="calendar-item">
+
+
+                                    <div class="calendar-date">
+
+                                        <span class="calendar-day">
+                                            21
+                                        </span>
+
+                                        <span class="calendar-month">
+                                            AGO
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="calendar-info">
+
+                                        <h3>
+                                            Reunião pedagógica
+                                        </h3>
+
+                                        <p>
+
+                                            <i
+                                                class="fa-regular fa-clock"
+                                                aria-hidden="true"
+                                            ></i>
+
+                                            14:00 - 16:00
+
+                                        </p>
+
+                                        <span>
+                                            Sala dos professores
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <button
+                                class="calendar-button"
+                                type="button"
+                                onclick="window.location.href='calendario.html'"
+                            >
+
+                                Ver calendário completo
+
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </button>
+
+
+                        </div>
+
+
+                        <!-- ==================================================
+                                AVISOS DA ESCOLA
+                        =================================================== -->
+
+                        <div class="dashboard-panel">
+
+
+                            <div class="panel-header">
+
+
+                                <div>
+
+                                    <h2>
+                                        Avisos da escola
+                                    </h2>
+
+                                    <p>
+                                        Comunicados recentes
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    class="panel-action"
+                                    type="button"
+                                    onclick="window.location.href='notificacoes.html'"
+                                    title="Abrir notificações"
+                                    aria-label="Abrir notificações"
+                                >
+
+                                    <i
+                                        class="fa-solid fa-bullhorn"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </button>
+
+
+                            </div>
+
+
+                            <div class="notice-list" id="dashboardNoticeList">
+
+
+                                <!-- AVISO 1 -->
+
+                                <div class="notice-item">
+
+
+                                    <div class="notice-icon importante">
+
+                                        <i
+                                            class="fa-solid fa-circle-exclamation"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                    </div>
+
+
+                                    <div class="notice-info">
+
+
+                                        <div class="notice-title">
+
+                                            <h3>
+                                                Reunião de responsáveis
+                                            </h3>
+
+                                            <span class="notice-tag importante-tag">
+                                                Importante
+                                            </span>
+
+                                        </div>
+
+
+                                        <p>
+                                            A reunião acontecerá na próxima
+                                            sexta-feira, às 18h.
+                                        </p>
+
+
+                                        <span class="notice-time">
+                                            Hoje, 08:30
+                                        </span>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <!-- AVISO 2 -->
+
+                                <div class="notice-item">
+
+
+                                    <div class="notice-icon informativo">
+
+                                        <i
+                                            class="fa-solid fa-info"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                    </div>
+
+
+                                    <div class="notice-info">
+
+
+                                        <div class="notice-title">
+
+                                            <h3>
+                                                Novo comunicado
+                                            </h3>
+
+                                            <span class="notice-tag informativo-tag">
+                                                Informação
+                                            </span>
+
+                                        </div>
+
+
+                                        <p>
+                                            O calendário acadêmico foi
+                                            atualizado pela secretaria.
+                                        </p>
+
+
+                                        <span class="notice-time">
+                                            Ontem, 15:40
+                                        </span>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <!-- AVISO 3 -->
+
+                                <div class="notice-item">
+
+
+                                    <div class="notice-icon evento">
+
+                                        <i
+                                            class="fa-solid fa-calendar-check"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                    </div>
+
+
+                                    <div class="notice-info">
+
+
+                                        <div class="notice-title">
+
+                                            <h3>
+                                                Evento escolar
+                                            </h3>
+
+                                            <span class="notice-tag evento-tag">
+                                                Evento
+                                            </span>
+
+                                        </div>
+
+
+                                        <p>
+                                            A escola realizará uma atividade
+                                            especial no final do mês.
+                                        </p>
+
+
+                                        <span class="notice-time">
+                                            08 de agosto, 10:15
+                                        </span>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <button
+                                class="notice-button"
+                                type="button"
+                                onclick="window.location.href='notificacoes.html'"
+                            >
+
+                                Ver todos os avisos
+
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </button>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                    <!-- ==================================================
+                            DESEMPENHO ACADÊMICO
+                    =================================================== -->
+
+                    <section
+                        class="dashboard-performance"
+                        aria-labelledby="performanceTitle"
+                    >
+
+
+                        <div class="performance-header">
+
+
+                            <div>
+
+                                <h2 id="performanceTitle">
+                                    Desempenho Acadêmico
+                                </h2>
+
+                                <p>
+                                    Acompanhe a evolução da média dos alunos.
+                                </p>
+
+                            </div>
+
+
+                            <select
+                                class="performance-select"
+                                aria-label="Selecionar ano do desempenho acadêmico"
+                            >
+
+                                <option value="2026">
+                                    2026
+                                </option>
+
+                                <option value="2025">
+                                    2025
+                                </option>
+
+                                <option value="2024">
+                                    2024
+                                </option>
+
+                            </select>
+
+
+                        </div>
+
+
+                        <div
+                            class="performance-chart"
+                            role="img"
+                            aria-label="Ainda não há dados de desempenho"
+                        >
+
+
+                            <div class="chart-y-axis">
+
+                                <span>10</span>
+                                <span>8</span>
+                                <span>6</span>
+                                <span>4</span>
+                                <span>2</span>
+                                <span>0</span>
+
+                            </div>
+
+
+                            <div class="chart-area">
+
+
+                                <div
+                                    class="chart-grid"
+                                    aria-hidden="true"
+                                >
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </div>
+
+
+                                <div class="chart-bars">
+
+
+                                    <div class="chart-column">
+
+                                        <div
+                                            class="chart-bar"
+                                            style="height: 0%;"
+                                            data-value="—"
+                                        ></div>
+
+                                        <span>
+                                            1º Bim.
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="chart-column">
+
+                                        <div
+                                            class="chart-bar"
+                                            style="height: 0%;"
+                                            data-value="—"
+                                        ></div>
+
+                                        <span>
+                                            2º Bim.
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="chart-column">
+
+                                        <div
+                                            class="chart-bar"
+                                            style="height: 0%;"
+                                            data-value="—"
+                                        ></div>
+
+                                        <span>
+                                            3º Bim.
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="chart-column">
+
+                                        <div
+                                            class="chart-bar"
+                                            style="height: 0%;"
+                                            data-value="—"
+                                        ></div>
+
+                                        <span>
+                                            4º Bim.
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                    <!-- ==================================================
+                                FREQUÊNCIA
+                    =================================================== -->
+
+                    <section
+                        class="dashboard-attendance"
+                        aria-labelledby="attendanceTitle"
+                    >
+
+
+                        <div class="attendance-header">
+
+
+                            <div>
+
+                                <h2 id="attendanceTitle">
+                                    Frequência dos Alunos
+                                </h2>
+
+                                <p>
+                                    Acompanhe a presença dos alunos
+                                    no período atual.
+                                </p>
+
+                            </div>
+
+
+                            <select
+                                class="attendance-select"
+                                aria-label="Selecionar ano da frequência"
+                            >
+
+                                <option value="2026">
+                                    2026
+                                </option>
+
+                                <option value="2025">
+                                    2025
+                                </option>
+
+                                <option value="2024">
+                                    2024
+                                </option>
+
+                            </select>
+
+
+                        </div>
+
+
+                        <div class="attendance-content">
+
+
+                            <!-- GRÁFICO -->
+
+                            <div class="attendance-chart">
+
+
+                                <div
+                                    class="donut-chart"
+                                    style="background: conic-gradient(#e5e7eb 0 100%);"
+                                    role="img"
+                                    aria-label="Ainda não há registros de frequência"
+                                >
+
+
+                                    <div class="donut-center">
+
+                                        <strong id="dashboardAttendancePercentage">
+                                            —
+                                        </strong>
+
+                                        <span>
+                                            Frequência
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <!-- INFORMAÇÕES -->
+
+                            <div class="attendance-info">
+
+
+                                <div class="attendance-stat">
+
+
+                                    <div class="attendance-stat-icon presenca">
+
+                                        <i
+                                            class="fa-solid fa-user-check"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <span>
+                                            Presenças
+                                        </span>
+
+                                        <strong id="dashboardPresent">
+                                            0
+                                        </strong>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="attendance-stat">
+
+
+                                    <div class="attendance-stat-icon falta">
+
+                                        <i
+                                            class="fa-solid fa-user-xmark"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <span>
+                                            Faltas
+                                        </span>
+
+                                        <strong id="dashboardAbsent">
+                                            0
+                                        </strong>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="attendance-stat">
+
+
+                                    <div class="attendance-stat-icon media-frequencia">
+
+                                        <i
+                                            class="fa-solid fa-chart-line"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <span>
+                                            Média de frequência
+                                        </span>
+
+                                        <strong id="dashboardAttendanceAverage">
+                                            —
+                                        </strong>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                    <!-- ==================================================
+                            RESUMO DE INDICADORES
+                    =================================================== -->
+
+                    <section
+                        class="dashboard-indicators"
+                        aria-labelledby="indicatorsTitle"
+                    >
+
+
+                        <div class="indicators-header">
+
+                            <div>
+
+                                <h2 id="indicatorsTitle">
+                                    Resumo de Indicadores
+                                </h2>
+
+                                <p>
+                                    Visão geral das informações que
+                                    precisam de atenção.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="indicators-grid">
+
+
+                            <!-- ATIVIDADES PENDENTES -->
+
+                            <div class="indicator-card">
+
+
+                                <div class="indicator-icon pendentes">
+
+                                    <i
+                                        class="fa-solid fa-list-check"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </div>
+
+
+                                <div class="indicator-content">
+
+                                    <span>
+                                        Atividades pendentes
+                                    </span>
+
+                                    <strong id="dashboardPendingActivities">
+                                        0
+                                    </strong>
+
+                                    <small>
+                                        Atividades aguardando conclusão
+                                    </small>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <!-- ALUNOS EM ATENÇÃO -->
+
+                            <div class="indicator-card">
+
+
+                                <div class="indicator-icon atencao">
+
+                                    <i
+                                        class="fa-solid fa-user-clock"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </div>
+
+
+                                <div class="indicator-content">
+
+                                    <span>
+                                        Alunos em atenção
+                                    </span>
+
+                                    <strong id="dashboardStudentsAttention">
+                                        0
+                                    </strong>
+
+                                    <small>
+                                        Necessitam de acompanhamento
+                                    </small>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <!-- BAIXA FREQUÊNCIA -->
+
+                            <div class="indicator-card">
+
+
+                                <div class="indicator-icon baixa-frequencia">
+
+                                    <i
+                                        class="fa-solid fa-user-xmark"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </div>
+
+
+                                <div class="indicator-content">
+
+                                    <span>
+                                        Baixa frequência
+                                    </span>
+
+                                    <strong id="dashboardLowAttendance">
+                                        0
+                                    </strong>
+
+                                    <small>
+                                        Abaixo do limite definido
+                                    </small>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <!-- NOTAS PENDENTES -->
+
+                            <div class="indicator-card">
+
+
+                                <div class="indicator-icon notas-pendentes">
+
+                                    <i
+                                        class="fa-solid fa-pen-to-square"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                </div>
+
+
+                                <div class="indicator-content">
+
+                                    <span>
+                                        Notas pendentes
+                                    </span>
+
+                                    <strong id="dashboardPendingGrades">
+                                        0
+                                    </strong>
+
+                                    <small>
+                                        Notas aguardando lançamento
+                                    </small>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </section>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- ==================================================
+                        JAVASCRIPT
+    =================================================== -->
+
+    <script src="../js/core.js?v=20261103-welcome1"></script>
+    <script src="../js/dashboard.js?v=20261103-welcome1"></script>
+
+
+    <script>
+
+        /*
+         * Logout temporário do protótipo.
+         *
+         * Na versão PHP, autenticação e encerramento
+         * da sessão deverão ser feitos pelo servidor.
+         */
+
+        const dashboardLogoutButton = null;
+
+
+        if (dashboardLogoutButton) {
+
+            dashboardLogoutButton.addEventListener(
+                "click",
+                function () {
+
+                    sessionStorage.removeItem(
+                        "primewayLogado"
+                    );
+
+                    sessionStorage.removeItem(
+                        "primewayUsuario"
+                    );
+
+                    window.location.href =
+                        "login.html";
+
+                }
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

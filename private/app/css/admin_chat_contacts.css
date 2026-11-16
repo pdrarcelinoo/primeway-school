@@ -1,0 +1,24 @@
+/* Nova conversa administrativa: interface independente, responsiva e acessível. */
+.admin-contacts-dialog{border:1px solid #dce4eb;border-radius:18px;background:#fff;color:#1f2b3c;width:min(560px,calc(100vw - 32px));max-height:min(760px,calc(100dvh - 42px));padding:0;box-shadow:0 24px 80px rgba(16,35,57,.28);overflow:auto}
+.admin-contacts-dialog::backdrop{background:rgba(11,22,36,.58)}
+.admin-contacts-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:24px 24px 15px}
+.admin-contacts-head h2{font-size:24px;margin:5px 0 5px;color:#203750}
+.admin-contacts-head p{font-size:13px;color:#58687b;line-height:1.5}
+.admin-contacts-head button{border:0;background:#f1f4f7;border-radius:9px;height:36px;width:36px;color:#344a5e;cursor:pointer;flex-shrink:0}
+.admin-contacts-filters{display:grid;grid-template-columns:1fr 170px;gap:7px 12px;margin:0 24px 16px}
+.admin-contacts-filters label{font-size:12px;font-weight:650;color:#47576b}
+.admin-contacts-filters input,.admin-contacts-filters select{height:44px;width:100%;min-width:0;background:#fff;color:#25394d;border:1px solid #cdd6e1;border-radius:9px;padding:10px 12px;font-size:14px}
+.admin-contacts-filters input:focus-visible,.admin-contacts-filters select:focus-visible,.admin-contacts-dialog button:focus-visible{outline:2px solid #2d6393;outline-offset:2px}
+.admin-contacts-list{min-height:160px;max-height:330px;overflow:auto;border-top:1px solid #eef1f4;border-bottom:1px solid #eef1f4}
+.admin-contact-row{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:14px 24px;border:0;border-bottom:1px solid #edf1f5;background:#fff;cursor:pointer;color:#203750}
+.admin-contact-row:hover:not(:disabled){background:#f3f7fb}
+.admin-contact-row:disabled{cursor:wait;opacity:.6}
+.admin-contact-avatar{display:grid;place-items:center;flex-shrink:0;width:40px;height:40px;background:#edf2f8;color:#274666;border-radius:50%;font-size:12px;font-weight:700}
+.admin-contact-meta{display:flex;flex-direction:column;gap:3px;min-width:0}
+.admin-contact-meta strong{font-size:14px;overflow-wrap:anywhere}
+.admin-contact-meta small{font-size:12px;color:#697b8c;overflow-wrap:anywhere}
+.admin-contact-hint{margin:22px 24px;color:#667789;text-align:center;font-size:14px;line-height:1.6}
+.admin-contacts-pagination{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:16px 24px 20px;color:#687789;font-size:13px}
+.admin-contacts-pagination button{border:1px solid #cbd6e2;color:#294767;background:#f7f9fc;border-radius:8px;padding:9px 15px;cursor:pointer;font-size:13px}
+.admin-contacts-pagination button:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:540px){.admin-contacts-head{padding:18px 16px 12px}.admin-contacts-filters{grid-template-columns:1fr;margin:0 16px 12px}.admin-contact-row{padding:12px 16px}.admin-contacts-pagination{padding:14px 16px}.admin-contacts-dialog{max-height:calc(100dvh - 25px)}}

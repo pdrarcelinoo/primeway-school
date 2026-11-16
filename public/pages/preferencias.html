@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Configurações pessoais | PrimeWay School</title>
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<div class="app-layout">
+  <aside class="sidebar" aria-label="Navegação pessoal">
+    <div class="sidebar-logo"><img src="../img/logo.png" alt="PrimeWay School"></div>
+    <nav class="sidebar-menu" aria-label="Minhas páginas">
+      <a href="perfil.html"><i class="fa-solid fa-user-pen" aria-hidden="true"></i><span>Meu perfil</span></a>
+      <a href="preferencias.html" class="active" aria-current="page"><i class="fa-solid fa-gear" aria-hidden="true"></i><span>Configurações</span></a>
+    </nav>
+    <div class="sidebar-bottom"><a href="perfil.html" class="pw-preferences-profile-link"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>Voltar ao perfil</span></a></div>
+  </aside>
+  <main class="pw-preferences-page">
+    <div class="pw-preferences-inner">
+      <a href="perfil.html" data-primeway-preferences-back class="pw-preferences-back"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Voltar ao meu painel</a>
+      <h1>Configurações</h1>
+      <section class="pw-appearance-panel" aria-labelledby="themeSettingsTitle">
+        <div>
+          <span class="pw-appearance-kicker">APARÊNCIA</span>
+          <h2 id="themeSettingsTitle">Modo noturno</h2>
+          <p>Ative o fundo escuro para navegar pelo painel, chat, calendário e demais páginas com mais conforto visual.</p>
+          <p class="pw-appearance-info" data-primeway-theme-state role="status" aria-live="polite">Modo claro ativado</p>
+        </div>
+        <div class="pw-appearance-control">
+          <span>Ativar</span>
+          <label class="pw-theme-switch">
+            <input type="checkbox" role="switch" data-primeway-theme-toggle aria-label="Ativar modo noturno" aria-checked="false">
+            <span class="pw-theme-track" aria-hidden="true"></span>
+          </label>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="../js/core.js?v=20261027-perfil"></script>
+</body>
+</html>
