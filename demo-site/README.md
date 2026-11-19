@@ -12,7 +12,7 @@ Esta pasta contém uma versão estática e independente para apresentação púb
 ## Publicação gratuita pelo GitHub Pages
 O workflow `.github/workflows/deploy-demo-pages.yml` publica somente esta pasta (`demo-site/`). Ele não publica a pasta `public/` inteira, pois a aplicação principal contém endpoints PHP que não devem ser expostos como arquivos estáticos.
 
-Após habilitar GitHub Actions e GitHub Pages para o repositório, a publicação será feita pelo workflow. O endereço esperado do projeto é:
+Para habilitar a primeira publicação, acesse **Settings → Pages** no repositório e, em **Build and deployment → Source**, selecione **GitHub Actions**. Confirme também em **Actions → General** que workflows estão habilitados. Depois disso, a publicação será feita pelo workflow nas próximas atualizações da pasta. O endereço esperado do projeto é:
 
 `https://pdrarcelinoo.github.io/primeway-school/`
 
