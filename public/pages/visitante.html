@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Ambiente demonstrativo do PrimeWay School com dados fictícios.">
+  <title>PrimeWay School | Demonstração Beta</title>
+  <link rel="icon" type="image/png" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/demo-visitante.css?v=20261119-1">
+</head>
+<body>
+  <main id="demoApp" class="demo-app">
+    <section id="profilePicker" class="picker-screen">
+      <header class="picker-header">
+        <a class="brand" href="login.html"><img src="../img/logo.png" alt=""><span>PrimeWay <b>School</b></span></a>
+        <span class="beta-label"><i class="fa-solid fa-flask"></i> AMBIENTE BETA</span>
+      </header>
+      <div class="picker-content">
+        <span class="eyebrow">CONHEÇA O PRIMEWAY SCHOOL</span>
+        <h1>Explore a experiência<br><em>de cada perfil.</em></h1>
+        <p class="picker-lead">Escolha um perfil para navegar por uma demonstração interativa do sistema. Não é necessário criar conta ou informar senha.</p>
+        <div class="profile-grid" id="profileGrid" aria-label="Escolha um perfil de demonstração"></div>
+        <div class="demo-safety"><i class="fa-solid fa-shield-halved"></i><span><strong>Ambiente demonstrativo e seguro</strong><br>Todos os nomes, registros e indicadores são fictícios. As ações são apenas ilustrativas e não alteram dados.</span></div>
+        <a class="back-login" href="login.html"><i class="fa-solid fa-arrow-left"></i> Voltar ao login</a>
+      </div>
+      <footer>PrimeWay School · Demonstração Beta · Dados fictícios</footer>
+    </section>
+
+    <section id="workspace" class="workspace" hidden>
+      <aside class="demo-sidebar">
+        <a class="brand side-brand" href="#" aria-label="PrimeWay School"><img src="../img/logo.png" alt=""><span>PrimeWay <b>School</b></span></a>
+        <div class="demo-mode"><i class="fa-solid fa-eye"></i><span>Modo demonstração</span></div>
+        <div class="profile-mini"><div class="avatar" id="sideAvatar">A</div><div><strong id="sideName">Visitante</strong><small id="sideRole">Perfil</small></div></div>
+        <nav id="demoNav" class="demo-nav" aria-label="Navegação da demonstração"></nav>
+        <div class="side-bottom">
+          <div class="session-clock"><i class="fa-regular fa-clock"></i><span>Tempo restante</span><strong id="timeLeft">30:00</strong></div>
+          <button id="changeProfile" class="side-action"><i class="fa-solid fa-users"></i> Trocar perfil</button>
+          <a class="side-action exit-link" href="login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair da demonstração</a>
+        </div>
+      </aside>
+
+      <div class="workspace-main">
+        <header class="workspace-topbar">
+          <div><span class="topbar-kicker">PRIMEWAY SCHOOL / BETA</span><strong id="topbarTitle">Visão geral</strong></div>
+          <div class="topbar-right"><span class="read-only"><i class="fa-solid fa-lock"></i> Somente leitura</span><div class="avatar small" id="topAvatar">A</div></div>
+        </header>
+        <main id="demoContent" class="demo-content" tabindex="-1"></main>
+        <footer class="workspace-footer"><span>PrimeWay School</span><span>Ambiente fictício · Nenhuma informação é salva</span></footer>
+      </div>
+    </section>
+    <div id="demoToast" class="demo-toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="../js/demo-visitante.js?v=20261119-1"></script>
+</body>
+</html>
