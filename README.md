@@ -16,9 +16,15 @@ O desenvolvimento do PRIMEWay School proporcionou a oportunidade de aplicar conh
 
 ## Acesse e conheça o sistema
 
-**Aplicação online:**
+**Aplicação oficial:**
 
-[**Acessar PRIMEWay School**](https://primeway-web-production.up.railway.app/pages/login.html)
+[**Acessar PRIMEWay School — Sistema completo**](https://primeway-web-production.up.railway.app/pages/login.html)
+
+**Demonstração pública (Beta):**
+
+[**Conhecer a demonstração Beta do PRIMEWay School**](https://pdrarcelinoo.github.io/primeway-school/)
+
+A demonstração Beta é uma versão estática e independente, criada para permitir que visitantes conheçam a navegação e a proposta visual do projeto sem precisar de credenciais. Ela utiliza dados fictícios e não se conecta ao banco de dados nem ao back-end PHP da aplicação oficial. Algumas ações são apenas ilustrativas e não representam operações reais.
 
 **Documentação para avaliação:**
 

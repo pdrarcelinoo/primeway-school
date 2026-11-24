@@ -4,6 +4,16 @@ Este guia foi escrito para recrutadores, avaliadores e profissionais interessado
 
 ## 1. Acesso
 
+O PRIMEWay School possui dois ambientes de apresentação:
+
+### Demonstração pública (Beta)
+
+**Endereço:** https://pdrarcelinoo.github.io/primeway-school/
+
+A demonstração Beta é uma vitrine estática e independente, com cinco perfis demonstrativos e dados inteiramente fictícios. Não exige login, não se conecta ao back-end PHP ou ao banco MySQL e não realiza operações reais. Mensagens, cadastros e ações sensíveis são exemplos visuais ou permanecem desativados.
+
+### Aplicação oficial
+
 **Endereço:** https://primeway-web-production.up.railway.app/pages/login.html
 
 O sistema exige e-mail e senha de uma conta válida. **Ainda não existe um login público verificado para divulgação.** Solicite ao responsável pelo projeto uma **conta de demonstração fictícia** por https://github.com/pdrarcelinoo/primeway-school/issues/new (se as Issues estiverem habilitadas) ou pelo contato profissional indicado em https://github.com/pdrarcelinoo. A senha deve ser enviada por um canal privado, **não** por uma Issue pública do GitHub.
